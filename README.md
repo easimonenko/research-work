@@ -4,7 +4,7 @@
 
 Автор материалов: Симоненко Евгений Анатольевич <easimonenko@mail.ru>.
 
-- [Презентация об arXiv.org](./arxive.org-presentation/)
+- [Презентация об arXiv.org](./arxiv.org-presentation/)
 
 ---
 
