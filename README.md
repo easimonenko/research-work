@@ -5,6 +5,7 @@
 Автор материалов: Симоненко Евгений Анатольевич <easimonenko@mail.ru>.
 
 - [Презентация об arXiv.org](./arxiv.org-presentation/)
+- [Материалы по OAI-PMH](./oai-pmh-materials)
 
 ---
 

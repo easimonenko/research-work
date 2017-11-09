@@ -1,5 +1,7 @@
 # Материалы по OAI-PMH
 
+[Руководство по утилите командной строки oai-pmh](./oai-pmh-cli.md)
+
 ## Первоисточники и статьи
 
 - [The Open Archives Initiative Protocol for Metadata Harvesting](http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm)
@@ -21,7 +23,3 @@
 ## Программное обеспечение
 
 - [OAI-PMH 2.0 harvester module for nodejs](https://github.com/paperhive/oai-pmh)
-
-- [httpoison -- Yet Another HTTP client for Elixir powered by hackney](https://hex.pm/packages/httpoison)
-
-- [sweet_xml -- An sweet wrapper of :xmerl to help query xml docs](https://hex.pm/packages/sweet_xml)
