@@ -22,6 +22,8 @@ SVN.
 Артефакты проекта:
 
 - [проект в ProjectLibre на период с октября по декабрь 2017](./repository-aggregator.pod)
+- [проект в Umbrello (диаграммы UML)](./repository-aggregator.xmi)
+- [диаграммы UML в формате PNG](./uml/README.md)
 
 Участники проекта:
 
