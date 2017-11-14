@@ -1,5 +1,9 @@
 # Диаграммы UML для Repository Aggregator
 
+Диаграмма прецедентов:
+
+![](./UseCaseDiagram.png)
+
 Диаграмма пакетов:
 
 ![](./PackageDiagram.png)
