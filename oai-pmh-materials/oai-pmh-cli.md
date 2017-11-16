@@ -185,10 +185,10 @@ oai-pmh list-metadata-formats http://export.arxiv.org/oai2
 
 ## Список записей
 
-Для получения списка записей выполните:
+Для получения списка записей выполните запрос:
 
 ``` sh
-oai-pmh list-records http://export.arxiv.org/oai2?metadataPrefix=arXiv
+oai-pmh list-records -p arXiv http://export.arxiv.org/oai2
 ```
 
 (Эта команда, кроме формата вывода, идентична запросу
@@ -248,15 +248,15 @@ oai-pmh list-records http://export.arxiv.org/oai2?metadataPrefix=arXiv
 Этот JSON-документ содержит метаданные о статье, размещённой на arXiv.org.
 Структура этого документа ясная и не требует пояснений.
 
-В этом виде запросов с помощью параметра `set` уточнить набор, из которого
+В этом виде запросов с помощью опции `--set` (`-s`) уточнить набор, из которого
 хотим получить метаданные, например:
 
-``` sh
-oai-pmh list-records "http://export.arxiv.org/oai2?metadataPrefix=arXiv&set=cs"
+``` bash
+oai-pmh list-records -p arXiv -s cs http://export.arxiv.org/oai2
 ```
 
-(Обратите внимание на кавычки вокруг URL и на то, что параметры запроса
-разделяются символом амперсанда.)
+(Эта команда, кроме формата вывода, идентична запросу
+<http://export.arxiv.org/oai2?verb=ListRecords&set=cs&metadataPrefix=arXiv>.)
 
 Получим:
 
@@ -300,15 +300,70 @@ oai-pmh list-records "http://export.arxiv.org/oai2?metadataPrefix=arXiv&set=cs"
 }
 ```
 
-## Получение записи
+Для получения всех записей, начиная с определённой даты, нужно указать
+опцию `--from` (`-f`):
 
-Для получение метаданных конкретной записи следовало бы использовать команду вида:
-
-``` sh
-oai-pmh get-record "http://export.arxiv.org/oai2?metadataPrefix=arXiv&identifier=oai:arXiv.org:0704.0002"
+``` bash
+oai-pmh list-records -p arXiv -s cs -f 2017-11-16 http://export.arxiv.org/oai2
 ```
 
-Однако это не срабатывает. В то время как стандартный HTTP-запрос проходит успешно:
+Для получения всех записей до определённой даты, нужно указать
+опцию `--until` (`-u`).
+
+## Получение записи
+
+Для получение метаданных конкретной записи выполните команду вида:
+
+``` sh
+oai-pmh get-record -p arXiv -i oai:arXiv.org:0704.0002 http://export.arxiv.org/oai2
+```
+
+Получим:
+
+``` json
+{
+  "header": {
+    "identifier": "oai:arXiv.org:0704.0002",
+    "datestamp": "2008-12-13",
+    "setSpec": [
+      "cs",
+      "math"
+    ]
+  },
+  "metadata": {
+    "arXiv": {
+      "$": {
+        "xmlns": "http://arxiv.org/OAI/arXiv/",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:schemaLocation": "http://arxiv.org/OAI/arXiv/ http://arxiv.org/OAI/arXiv.xsd"
+      },
+      "id": "0704.0002",
+      "created": "2007-03-30",
+      "updated": "2008-12-13",
+      "authors": {
+        "author": [
+          {
+            "keyname": "Streinu",
+            "forenames": "Ileana"
+          },
+          {
+            "keyname": "Theran",
+            "forenames": "Louis"
+          }
+        ]
+      },
+      "title": "Sparsity-certifying Graph Decompositions",
+      "categories": "math.COcs.CG",
+      "comments": "To appear in Graphs and Combinatorics",
+      "msc-class": "05C85; 05C70; 68R10; 05B35",
+      "license": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/",
+      "abstract": "We describe a new algorithm, the $(k,\\ell)$-pebble game with colors, and use\nit obtain a characterization of the family of $(k,\\ell)$-sparse graphs and\nalgorithmic solutions to a family of problems concerning tree decompositions of\ngraphs. Special instances of sparse graphs appear in rigidity theory and have\nreceived increased attention in recent years. In particular, our colored\npebbles generalize and strengthen the previous results of Lee and Streinu and\ngive a new proof of the Tutte-Nash-Williams characterization of arboricity. We\nalso present a new decomposition that certifies sparsity based on the\n$(k,\\ell)$-pebble game with colors. Our work also exposes connections between\npebble game algorithms and previous sparse graph algorithms by Gabow, Gabow and\nWestermann and Hendrickson."
+    }
+  }
+}
+```
+
+Результат идентичен HTTP-запросу ниже за исключением формата:
 
 ``` http
 http://export.arxiv.org/oai2?verb=GetRecord&metadataPrefix=arXiv&identifier=oai:arXiv.org:0704.0002
@@ -369,40 +424,47 @@ Westermann and Hendrickson.
 
 ## Список идентификаторов
 
-Эта команда также не работает как ожидается:
+Для получения списка идентификаторов выполните запрос:
 
 ``` sh
-oai-pmh list-identifiers "http://export.arxiv.org/oai2?metadataPrefix=arXiv"
+oai-pmh list-identifiers -p arXiv -f 2017-11-16 http://export.arxiv.org/oai2
 ```
 
-В то время как стандартный запрос проходит:
+Получим список JSON-документов:
+
+``` json
+{"identifier":"oai:arXiv.org:0901.2457","datestamp":"2017-11-16","setSpec":"math"}
+{"identifier":"oai:arXiv.org:1005.1462","datestamp":"2017-11-16","setSpec":"math"}
+{"identifier":"oai:arXiv.org:1006.2955","datestamp":"2017-11-16","setSpec":"cs"}
+```
+
+Идентично соответствующему HTTP-запросу за исключением формата ответа:
 
 ``` url
-http://export.arxiv.org/oai2?verb=ListIdentifiers&metadataPrefix=arXiv
+http://export.arxiv.org/oai2?verb=ListIdentifiers&metadataPrefix=arXiv&set=cs&from=2017-11-16
 ```
 
 Результат:
 
 ``` xml
 <OAI-PMH xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
-  <responseDate>2017-11-09T19:25:10Z</responseDate>
-  <request verb="ListIdentifiers" metadataPrefix="arXiv">http://export.arxiv.org/oai2</request>
+  <responseDate>2017-11-16T18:46:16Z</responseDate>
+  <request verb="ListIdentifiers" from="2017-11-16" metadataPrefix="arXiv" set="cs">http://export.arxiv.org/oai2</request>
   <ListIdentifiers>
     <header>
-      <identifier>oai:arXiv.org:0704.0001</identifier>
-      <datestamp>2008-11-26</datestamp>
-      <setSpec>physics:hep-ph</setSpec>
-    </header>
-    <header>
-      <identifier>oai:arXiv.org:0704.0002</identifier>
-      <datestamp>2008-12-13</datestamp>
+      <identifier>oai:arXiv.org:1006.2955</identifier>
+      <datestamp>2017-11-16</datestamp>
       <setSpec>cs</setSpec>
-      <setSpec>math</setSpec>
     </header>
     <header>
-      <identifier>oai:arXiv.org:0704.0003</identifier>
-      <datestamp>2008-01-13</datestamp>
-      <setSpec>physics:physics</setSpec>
+      <identifier>oai:arXiv.org:1511.05201</identifier>
+      <datestamp>2017-11-16</datestamp>
+      <setSpec>cs</setSpec>
+    </header>
+    <header>
+      <identifier>oai:arXiv.org:1511.06660</identifier>
+      <datestamp>2017-11-16</datestamp>
+      <setSpec>cs</setSpec>
     </header>
   </ListIdentifiers>
 </OAI-PMH>
@@ -412,8 +474,11 @@ http://export.arxiv.org/oai2?verb=ListIdentifiers&metadataPrefix=arXiv
 
 Утилита oai-pmh в сочетании с другими средствами работы с JSON-документами
 позволяет выполнять разнообразные запросы и представлять их в компактном и ясном
-виде. Однако ввиду отсутствия подробного руководства, не удалось рассмотреть
-все возможности данной утилиты.
+виде. ~~Однако ввиду отсутствия подробного руководства, не удалось рассмотреть
+все возможности данной утилиты.~~ (Руководство было обновлено 16 ноября 2017 в
+ответ на
+[запрос](https://github.com/paperhive/oai-pmh/issues/4#issuecomment-343262293)
+автора статьи.)
 
 ---
 
