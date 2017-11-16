@@ -175,3 +175,7 @@ PS/EPS, JPEG, GIF, PNG, PDF.
 
 Не нужно осуществлять crawling. Архив предоставляет несколько способов машинного
 чтения: OAI-PMH (http://www.openarchives.org/), API, RSS.
+
+---
+
+(c) 2017, Evgeny Simonenko
