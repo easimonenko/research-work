@@ -6,7 +6,8 @@
 
 == Предисловие ==
 
-В 1996 году Richard Stallman опубликовал свой рассказ "Право читать". В 2000
+В 1996 году Richard Stallman опубликовал свой рассказ
+[https://www.gnu.org/philosophy/right-to-read.ru.html "Право читать"]. В 2000
 году рассказ был переведён Сергеем Коропом на русский язык. В 2002 году Richard
 Stallman дополнил рассказ информацией о современном положении дел. В этом
 рассказе идёт речь о мире, где больше нет публичных библиотек, а книги можно
@@ -175,6 +176,12 @@ PS/EPS, JPEG, GIF, PNG, PDF.
 
 Не нужно осуществлять crawling. Архив предоставляет несколько способов машинного
 чтения: OAI-PMH (http://www.openarchives.org/), API, RSS.
+
+== Ссылки ==
+
+* [https://arxiv.org arXiv.org]
+* [https://www.gnu.org/philosophy/right-to-read.ru.html Stallman R. "Право читать"]
+* [http://creativecommons.org/ Creative Commons]
 
 ---
 
