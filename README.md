@@ -4,6 +4,7 @@
 
 Автор материалов: Симоненко Евгений Анатольевич <easimonenko@mail.ru>.
 
+- [Материалы по графовым базам данных](./graph-databases)
 - [Презентация о релевантной логике](./relevance-logic-presentation)
 - [Доклад об arXiv.org](./arxiv.org-presentation)
 - [Материалы по OAI-PMH](./oai-pmh-materials)
