@@ -1,0 +1,100 @@
+# Краткий обзор свободно-распространяемых графовых СУБД
+
+## Neo4j
+
+- <https://neo4j.com/>
+- <https://github.com/neo4j/neo4j>
+- написана на Java
+- язык запросов [Cypher](http://www.opencypher.org/)
+- дополнительно поддерживается язык
+  [Gremlin](https://neo4j-contrib.github.io/gremlin-plugin/)
+- дополнительно поддерживается язык
+  [GraphQL](https://github.com/neo4j-contrib/neo4j-graphql)
+- дополнительно поддерживается язык
+  [SPARQL](https://github.com/neo4j-contrib/sparql-plugin)
+- легко установить и легко запустить
+- веб-интерфейс с графическим редактором
+- краткий курс для ознакомления, встроенный в веб-интерфейс
+- лицензия: GPLv3 (community) или AGPLv3 (enterprise)
+
+## ArangoDB
+
+- <https://www.arangodb.com/>
+- <https://github.com/arangodb/arangodb>
+- написана на C++
+- язык запросов [AQL](https://docs.arangodb.com/latest/AQL/index.html)
+- хорошая документация
+- есть пакеты для многих операционных систем
+- веб-интерфейс с графическим редактором
+- лицензия: Apache 2.0
+
+## Titan
+
+- <http://titan.thinkaurelius.com/>
+- <https://github.com/thinkaurelius/titan/>
+- написана на Java
+- поддерживается язык [Gremlin](https://tinkerpop.apache.org/) как основное
+  средство работы с базой данных
+- в качестве движков хранения данных использует другие СУБД
+- лицензия: Apache 2.0
+
+## OrientDB
+
+- <http://orientdb.com>
+- <https://github.com/orientechnologies/orientdb>
+- написана на Java
+- в качестве основного языка запросов используется расширенный
+  [SQL](http://orientdb.com/docs/last/SQL.html)
+- запустить затруднительно, требуется настройка
+- не удалось запустить из-за неясной ошибки аутентификации
+- лицензия: Apache 2.0
+
+## Cayley
+
+- <https://www.cayley.io/>
+- <https://github.com/cayleygraph/cayley>
+- написана на Go
+- в качестве языков запросов доступны JavaScript и
+  [MQL](https://ru.wikipedia.org/wiki/MQL)
+- в качестве движков хранения данных использует другие СУБД
+- сайт с документацией пуст, есть документация среди исходников на GitHub
+- предлагает несколько вариантов для хранения данных, используя другие СУБД
+- при запуске рухнула, сославшись на то, что не были найдены какие-то assets в
+  Go workspace
+- лицензия: Apache 2.0
+
+## FlockDB
+
+- <https://github.com/twitter-archive/flockdb>
+- написана на Scala
+- не поддерживается
+- требуется сборка из исходников
+- лицензия: Apache 2.0
+
+## GraphEngine
+
+- <https://www.graphengine.io>
+- <https://github.com/Microsoft/GraphEngine>
+- написана на C# и C++
+- не является СУБД, это движок для .Net и Visual Studio
+- лицензия: MIT
+
+## VertexDB
+
+- <http://www.dekorte.com/projects/opensource/vertexdb>
+- <https://github.com/stevedekorte/vertexdb>
+- написана на C
+- требует сборки из исходных текстов
+- лицензия: BSD
+
+## Bitsy
+
+- <https://bitbucket.org/lambdazen/bitsy/wiki/Home>
+- <https://bitbucket.org/lambdazen/bitsy>
+- написана на Java
+- встраиваемая СУБД
+- лицензия: Apache 2.0
+
+---
+
+(c) Симоненко Евгений, 2017-2018
