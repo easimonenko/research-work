@@ -114,7 +114,7 @@ sudo service neo4j restart
 <http://localhost:7474/browser/>. После чего откроется великолепный
 веб-интерфейс:
 
-![Neo4j browser: home screen](neo4j-browser-home.png)
+![Neo4j browser: home screen](./images/neo4j-browser-home.png)
 
 Вместо `cypher-shell` можно установить альтернативный клиент
 [cycli](https://github.com/nicolewhite/cycli):

@@ -29,11 +29,11 @@ sudo service neo4j start
 После запуска перейдите по ссылке <http://localhost:7474/browser/>. Вы должны
 увидеть интерфейс Neo4j Browser:
 
-![Neo4j Browser: home screen](neo4j-browser-home.png)
+![Neo4j Browser: home screen](./images/neo4j-browser-home.png)
 
 Сейчас нас будут интересовать два элемента интерфейса.
 
-![Neo4j Browser: play](neo4j-browser-play.png)
+![Neo4j Browser: play](./images/neo4j-browser-play.png)
 
 ## Учебник
 
@@ -41,34 +41,34 @@ Neo4j предоставляет великолепный интерактивн
 рекомендую его пройти. Для этого просто щёлкните на **Start Learning** и сначала
 ознакомьтесь с основными понятиями Neo4j:
 
-![Neo4j Browser: graph fundamentals](neo4j-play-concepts-fundamentals.png)
+![Neo4j Browser: graph fundamentals](./images/neo4j-play-concepts-fundamentals.png)
 
-![Neo4j Browser: graph relationships](neo4j-play-concepts-relationships.png)
+![Neo4j Browser: graph relationships](./images/neo4j-play-concepts-relationships.png)
 
 По достижению последнего шага щёлкните на **Intro** и ознакомьтесь с
 возможностями Neo4j Browser:
 
-![Neo4j Browser: next steps](neo4j-play-next-steps.png)
+![Neo4j Browser: next steps](./images/neo4j-play-next-steps.png)
 
-![Neo4j Browser: introduction](neo4j-play-introduction.png)
+![Neo4j Browser: introduction](./images/neo4j-play-introduction.png)
 
 ## Редактор
 
 В верхней части окна Neo4j Browser располагается строка так называемого
 редактора:
 
-![Neo4j Browser: editor](neo4j-browser-editor.png)
+![Neo4j Browser: editor](./images/neo4j-browser-editor.png)
 
 Начиная набор команд с двоеточия увидим список всех доступных команд с кратким
 описанием:
 
-![Neo4j Browser: list of commands](neo4j-editor-list.png)
+![Neo4j Browser: list of commands](./images/neo4j-editor-list.png)
 
 Вызовем команду `:help`:
 
-![Neo4j Browser: help command](neo4j-editor-help.png)
+![Neo4j Browser: help command](./images/neo4j-editor-help.png)
 
-![Neo4j Browser: help](neo4j-browser-help.png)
+![Neo4j Browser: help](./images/neo4j-browser-help.png)
 
 Чтобы ознакомиться с примерами работы с графами можно выбрать
 `:play movie graph` или `:play northwind graph`.
@@ -84,7 +84,7 @@ Neo4j предоставляет великолепный интерактивн
 :play cypher
 ```
 
-![Neo4j Browser: play cypher](neo4j-play-cypher.png)
+![Neo4j Browser: play cypher](./images/neo4j-play-cypher.png)
 
 Итак, начнём. Создадим небольшой социальный граф. Перейдём в редактор и наберём
 первую команду на языке Cypher:
@@ -95,7 +95,7 @@ create (u1:Person {name: "Evgeny", from: "Krasnodar"})
 
 После выполнения команды Browser сообщит нам результат:
 
-![Neo4j Browser: create result](neo4j-browser-create-result.png)
+![Neo4j Browser: create result](./images/neo4j-browser-create-result.png)
 
 Добавим ещё один узел:
 
@@ -109,7 +109,7 @@ create (u2:Person {name: "Dmitry", from: "Tula"})
 match (ee:Person) return ee.name
 ```
 
-![Neo4j Browser: property match result](neo4j-cypher-match-property.png)
+![Neo4j Browser: property match result](./images/neo4j-cypher-match-property.png)
 
 А можем запросить все узлы данного типа:
 
@@ -117,12 +117,12 @@ match (ee:Person) return ee.name
 match (ee:Person) return ee
 ```
 
-![Neo4j Browser: edges match result](neo4j-cypher-match-edges.png)
+![Neo4j Browser: edges match result](./images/neo4j-cypher-match-edges.png)
 
 Обратите внимание на появившуюся кнопку **Graph**. Щёлкним на ней и увидим наши
 узлы в графическом виде:
 
-![Neo4j Browser: graph match result](neo4j-cypher-match-graph.png)
+![Neo4j Browser: graph match result](./images/neo4j-cypher-match-graph.png)
 
 ## Ссылки
 
