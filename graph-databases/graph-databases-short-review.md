@@ -95,6 +95,17 @@
 - требует сборки из исходных текстов
 - лицензия: BSD
 
+## AgensGraph
+
+- <http://bitnine.net/>
+- <https://github.com/bitnine-oss/agensgraph>
+- 484 звезды на GitHub
+- написана на C
+- базируется на PostgreSQL
+- в качестве языков запросов доступны SQL и Cypher
+- требует сборки из исходных текстов
+- лицензия: Apache 2.0
+
 ## Redis Graph
 
 - <http://redisgraph.io/>
@@ -103,6 +114,14 @@
 - написана на C
 - требует сборки из исходных текстов
 - лицензия: AGPL 3.0
+
+## Cypher for Apache Spark
+
+- <https://github.com/opencypher/cypher-for-apache-spark>
+- 56 звёзд на GitHub
+- написана на Scala
+- требует сборки из исходных текстов
+- лицензия: Apache 2.0
 
 ## Bitsy v3
 
