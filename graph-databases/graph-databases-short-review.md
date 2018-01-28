@@ -95,7 +95,25 @@
 - требует сборки из исходных текстов
 - лицензия: BSD
 
-## Bitsy
+## Redis Graph
+
+- <http://redisgraph.io/>
+- <https://github.com/swilly22/redis-graph>
+- 245 звёзд на GitHub
+- написана на C
+- требует сборки из исходных текстов
+- лицензия: AGPL 3.0
+
+## Bitsy v3
+
+- <https://github.com/lambdazen/bitsy/wiki>
+- <https://github.com/lambdazen/bitsy>
+- 5 звёзд на GitHub
+- написана на Java
+- встраиваемая СУБД
+- лицензия: Apache 2.0
+
+## Bitsy v2
 
 - <https://bitbucket.org/lambdazen/bitsy/wiki/Home>
 - <https://bitbucket.org/lambdazen/bitsy>
