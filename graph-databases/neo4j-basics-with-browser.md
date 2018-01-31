@@ -90,7 +90,7 @@ Neo4j предоставляет великолепный интерактивн
 первую команду на языке Cypher:
 
 ``` cypher
-create (u1:Person {name: "Evgeny", from: "Krasnodar"})
+CREATE (u1:Person {name: "Evgeny", from: "Krasnodar"})
 ```
 
 После выполнения команды Browser сообщит нам результат:
@@ -100,13 +100,13 @@ create (u1:Person {name: "Evgeny", from: "Krasnodar"})
 Добавим ещё один узел:
 
 ``` cypher
-create (u2:Person {name: "Dmitry", from: "Tula"})
+CREATE (u2:Person {name: "Dmitry", from: "Tula"})
 ```
 
 Теперь запросим все узлы типа `Person` и извлечём значения свойства `name`:
 
 ``` cypher
-match (ee:Person) return ee.name
+MATCH (ee:Person) RETURN ee.name
 ```
 
 ![Neo4j Browser: property match result](./images/neo4j-cypher-match-property.png)
@@ -114,7 +114,7 @@ match (ee:Person) return ee.name
 А можем запросить все узлы данного типа:
 
 ``` cypher
-match (ee:Person) return ee
+MATCH (ee:Person) RETURN ee
 ```
 
 ![Neo4j Browser: edges match result](./images/neo4j-cypher-match-edges.png)
@@ -123,6 +123,23 @@ match (ee:Person) return ee
 узлы в графическом виде:
 
 ![Neo4j Browser: graph match result](./images/neo4j-cypher-match-graph.png)
+
+Добавим связь между узлами:
+
+``` cypher
+MATCH (e:Person) WHERE e.name = "Evgeny"
+MATCH (d:Person) WHERE d.name = "Dmitry"
+CREATE (e)-[:KNOWS]->(d),
+  (d)-[:KNOWS]->(e)
+```
+
+И вновь запросим наш граф:
+
+![Neo4j Browser: graph with relationships](./images/neo4j-cypher-with-relationships.png)
+
+С помощью Cypher можно также выполнять различные операции над графами, например,
+запрашивать смежные вершины, друзей друзей в социальном графе, удалять рёбра и
+вершины и многое другое, но это тема для отдельного разговора.
 
 ## Ссылки
 
