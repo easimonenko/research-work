@@ -15,12 +15,14 @@ SVN.
 Для кеширования информации о репозиториях планируется использовать СУБД, тип
 которой ещё не выбран.
 
-Все сервисы предоставляют RESTful API.
+Все сервисы предоставляют RESTful API, написанный с использованием Swagger.
 
-На данный момент проект закрытый.
+На данный момент проект открыт лишь частично.
 
 Артефакты проекта:
 
+- [svn-broker](https://github.com/severe-island/ra-svn-broker)
+- [demo-application](https://github.com/severe-island/ra-demo-application)
 - [проект в ProjectLibre на период с октября по декабрь 2017](./repository-aggregator.pod)
 - [проект в Umbrello (диаграммы UML)](./repository-aggregator.xmi)
 - [диаграммы UML в формате PNG](./uml/README.md)
@@ -28,13 +30,15 @@ SVN.
 Участники проекта:
 
 - Перл Иван Андреевич: инициатор проекта
-- Симоненко Евгений: менеджер проекта и разработчик repository-aggregator
-- Фролов Артём: разработчик git-broker
-- Акпаралиев Нурбек: разработчик hg-broker
-- Медведев Дмитрий: разработчик svn-broker
+- Симоненко Евгений @easimonenko: менеджер проекта, разработчик
+  `repository-aggregator` и
+  [demo-application](https://github.com/severe-island/ra-demo-application)
+- Фролов Артём: разработчик `git-broker`
+- Акпаралиев Нурбек: разработчик `hg-broker`
+- Медведев Дмитрий @Mislitel: разработчик [svn-broker](https://github.com/severe-island/ra-svn-broker)
 - Иппо Вера: тестировщик проекта
 - Маслова Виктория: отвечает за качество и внедрение проекта
 
 ---
 
-(c) 2017, Симоненко Евгений
+(c) Симоненко Евгений, 2017-2018
