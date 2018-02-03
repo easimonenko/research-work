@@ -1,5 +1,10 @@
 # Введение в язык запросов Cypher
 
+В статье рассматривается язык запросов Cypher графовой СУБД Neo4j в сравнении
+с языком Prolog.
+
+## Введение
+
 Язык запросов _Cypher_ изначально разработан специально для графовой СУБД
 [Neo4j](https://neo4j.com/). Целью Cypher является предоставить интуитивно
 понятный, человеко читаемый язык запросов к графовым базам данных. На сегодня
@@ -13,6 +18,8 @@ Cypher поддерживается несколькими графовыми С
 
 Для знакомства с Cypher рассмотрим пример из классического учебника по Прологу
 за авторством И. Братко.
+
+## Генеалогическое дерево
 
 Итак, пусть мы имеем генеалогическое дерево, представленное на картинке ниже.
 
@@ -87,11 +94,8 @@ MATCH (p:Person) RETURN p
 
 ## Задаём вопросы
 
-(Здесь также будем рассматривать возможности Cypher, попутно сравнивая его с
-Prolog.)
-
 Что с этим можно делать? Можно убедиться в том, что, например, Pam является
-родителем Bob'а. Но Prolog мы бы это записали просто:
+родителем Bob'а. На Prolog мы бы это записали просто:
 
 ``` prolog
 parent('Pam','Bob').
@@ -100,7 +104,8 @@ parent('Pam','Bob').
 На Cypher так:
 
 ``` cypher
-MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Bob"}) RETURN ans
+MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Bob"})
+RETURN ans
 ```
 
 Мы получили соответствующий подграф:
@@ -110,20 +115,23 @@ MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Bob"}) RETURN an
 Однако это не совсем то, что нам надо. Изменим запрос:
 
 ``` cypher
-MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Bob"}) RETURN ans IS NOT NULL
+MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Bob"})
+RETURN ans IS NOT NULL
 ```
 
 Теперь в ответ получаем `true`. А если спросим:
 
 ``` cypher
-MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Liz"}) RETURN ans IS NOT NULL
+MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Liz"})
+RETURN ans IS NOT NULL
 ```
 
 То ничего не получим... Здесь нужно добавить слово `OPTIONAL`, тогда если
 результат будет пуст, то будет возвращаться `null`:
 
 ``` cypher
-OPTIONAL MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Liz"}) RETURN ans IS NOT NULL
+OPTIONAL MATCH ans = (:Person {name: "Pam"})-[:PARENT]->(:Person {name: "Liz"})
+RETURN ans IS NOT NULL
 ```
 
 Теперь получаем ожидаемый ответ `false`.
@@ -297,7 +305,8 @@ grandparent(X, Y):-parent(X, Z),parent(Z,Y).
 Но и на Cypher не намного сложней:
 
 ``` cypher
-MATCH (grandparent:Person)-[:PARENT]->()-[:PARENT]->(:Person) RETURN DISTINCT grandparent.name
+MATCH (grandparent:Person)-[:PARENT]->()-[:PARENT]->(:Person)
+RETURN DISTINCT grandparent.name
 ```
 
 Отлично, всё так и есть:
@@ -344,8 +353,15 @@ female('Joli').
 узлам.
 
 ``` cypher
-MATCH (p:Person) WHERE p.name IN ["Tom", "Dick", "Bob", "Jim", "Jack"] SET p:Male
-MATCH (p:Person) WHERE p.name IN ["Pam", "Kate", "Mary", "Liz", "Ann", "Pat", "Joli"] SET p:Female
+MATCH (p:Person)
+WHERE p.name IN ["Tom", "Dick", "Bob", "Jim", "Jack"]
+SET p:Male
+```
+
+``` cypher
+MATCH (p:Person)
+WHERE p.name IN ["Pam", "Kate", "Mary", "Liz", "Ann", "Pat", "Joli"]
+SET p:Female
 ```
 
 Поясним, что мы здесь сделали: выбрали все узлы с меткой `Person`, проверили их
@@ -406,6 +422,13 @@ MATCH (p:Person) WHERE p:Female RETURN p.name
 MATCH (p:Person:Male) RETURN p.name
 MATCH (p:Person:Female) RETURN p.name
 ```
+
+А ещё давайте ещё раз взглянем на наш граф визуально:
+
+![Генеалогическое дерево с метками Male и Female](./images/neo4j-family-tree-male-female.png)
+
+Neo4j Browser раскрасил узлы в два разных цвета в соответствии с метками Male и
+Female.
 
 Отлично, теперь мы можем запросить из базы данных всех отцов:
 
@@ -469,7 +492,8 @@ sister(X,Y):-female(X),parent(Z,X),parent(Z,Y),X\=Y.
 Отношение брат на Cypher:
 
 ``` cypher
-MATCH (brother:Person:Male)<-[:PARENT]-()-[:PARENT]->(p:Person) RETURN brother.name, p.name
+MATCH (brother:Person:Male)<-[:PARENT]-()-[:PARENT]->(p:Person)
+RETURN brother.name, p.name
 ```
 
 ``` plain
@@ -483,7 +507,8 @@ MATCH (brother:Person:Male)<-[:PARENT]-()-[:PARENT]->(p:Person) RETURN brother.n
 Отношение сестра на Cypher:
 
 ``` cypher
-MATCH (sister:Person:Female)<-[:PARENT]-()-[:PARENT]->(p:Person) RETURN sister.name, p.name
+MATCH (sister:Person:Female)<-[:PARENT]-()-[:PARENT]->(p:Person)
+RETURN sister.name, p.name
 ```
 
 ``` plain
