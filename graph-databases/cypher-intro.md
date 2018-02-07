@@ -1,7 +1,8 @@
-# Введение в язык запросов Cypher
+# Введение в язык запросов Cypher с параллельным кодом на Prolog
 
 В статье рассматривается язык запросов Cypher графовой СУБД Neo4j в сравнении
-с языком Prolog.
+с языком Prolog, что может быть полезно тем, кто уже знаком с Prolog, но ещё
+только приступает к изучению Cypher.
 
 ## Введение
 
@@ -655,11 +656,94 @@ MATCH (p1:Person)-[r]->(p2:Person) DELETE r
 
 ## Ответы
 
-...
+1. сын и дочь:
+  ``` cypher
+  MATCH (s:Person:Male)<-[:PARENT]-(p:Person) RETURN s.name, p.name
+  MATCH (s:Person:Female)<-[:PARENT]-(p:Person) RETURN s.name, p.name
+  ```
+2. дедушка и бабушка:
+  ``` cypher
+  MATCH (gf:Person:Male)-[:PARENT]->()-[:PARENT]->(gs:Person) RETURN gf.name, gs.name
+  MATCH (gm:Person:Female)-[:PARENT]->()-[:PARENT]->(gs:Person) RETURN gm.name, gs.name
+  ```
+3. внук и внучка:
+  ``` cypher
+  MATCH (gs:Person:Male)<-[:PARENT]-()<-[:PARENT]-(g:Person) RETURN gs.name, g.name
+  MATCH (gd:Person:Female)<-[:PARENT]-()<-[:PARENT]-(g:Person) RETURN gd.name, g.name
+  ```
+4. дядя и тётя:
+  ``` cypher
+  MATCH (u:Person:Male)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(n:Person)
+  RETURN u.name, n.name
+  ```
+  ``` cypher
+  MATCH (a:Person:Female)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(n:Person)
+  RETURN a.name, n.name
+  ```
+5. муж и жена:
+  ``` cypher
+  MATCH (h:Person:Male)-[:PARENT]->(:Person)<-[:PARENT]-(w:Person:Female)
+  RETURN h.name, w.name
+  ```
+  ``` cypher
+  MATCH (w:Person:Female)-[:PARENT]->(:Person)<-[:PARENT]-(h:Person:Male)
+  RETURN w.name, h.name
+  ```
+6. свёкр и свекровь:
+  ``` cypher
+  MATCH (f:Person:Male)-[:PARENT]->(:Person:Male)-[:PARENT]->(:Person)<-[:PARENT]-(w:Person:Female)
+  RETURN f.name, w.name
+  ```
+  ``` cypher
+  MATCH (m:Person:Female)-[:PARENT]->(:Person:Male)-[:PARENT]->(:Person)<-[:PARENT]-(w:Person:Female)
+  RETURN m.name, w.name
+  ```
+7. тесть и тёща:
+  ``` cypher
+  MATCH (f:Person:Male)-[:PARENT]->(:Person:Female)-[:PARENT]->(:Person)<-[:PARENT]-(h:Person:Male)
+  RETURN f.name, h.name
+  ```
+  ``` cypher
+  MATCH (m:Person:Female)-[:PARENT]->(:Person:Female)-[:PARENT]->(:Person)<-[:PARENT]-(h:Person:Male)
+  RETURN m.name, h.name
+  ```
+8. отчим (муж мамы, но не отец) и мачеха (жена папы, но не мама):
+  ``` cypher
+  MATCH (h:Person:Male)-[:PARENT]->(:Person)<-[:PARENT]-(m:Person:Female)-[:PARENT]->(s:Person)
+  WHERE NOT (h)-[:PARENT]->(s)
+  RETURN h.name, s.name
+  ```
+  ``` cypher
+  MATCH (w:Person:Female)-[:PARENT]->(:Person)<-[:PARENT]-(f:Person:Male)-[:PARENT]->(s:Person)
+  WHERE NOT (w)-[:PARENT]->(s)
+  RETURN w.name, s.name
+  ```
+9. свояк и свояченица:
+  ``` cypher
+  MATCH (b:Person:Male)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(:Person)<-[:PARENT]-(p:Person)
+  RETURN b.name, p.name
+  ```
+  ``` cypher
+  MATCH (s:Person:Female)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(:Person)<-[:PARENT]-(p:Person)
+  RETURN s.name, p.name
+  ```
+10. двоюродный брат и сестра:
+  ``` cypher
+  MATCH (b:Person:Male)<-[:PARENT]-(:Person)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(p:Person)
+  RETURN b.name, p.name
+  ```
+  ``` cypher
+  MATCH (s:Person:Female)<-[:PARENT]-(:Person)<-[:PARENT]-(:Person)-[:PARENT]->(:Person)-[:PARENT]->(p:Person)
+  RETURN s.name, p.name
+  ```
 
 ## Заключение
 
-...
+В статье на простом примере социального графа показано, как использовать
+возможности языка запросов Cypher. Также каждый пример сопровождается решением
+на языке Prolog, что позволяет сравнить два разных подхода к составлению
+запросов к базе данных социального графа. Более подробная информация о языке
+Cypher может быть найдена по ссылкам ниже.
 
 ## Ссылки
 
@@ -667,6 +751,16 @@ MATCH (p1:Person)-[r]->(p2:Person) DELETE r
 - [Neo4j Cypher Refcard](https://neo4j.com/docs/cypher-refcard/current/)
 - [openCypher](http://www.opencypher.org/)
 - [SWI-Prolog](http://swi-prolog.org/)
+
+## Библиография
+
+- Робинсон Ян, Вебер Джим, Эифрем Эмиль. Графовые базы данных. Новые возможности
+  для работы со связанными данными / пер. с англ. – 2-е изд. – М.: ДМК-Пресс,
+  2016 – 256 с.
+- Братко И. Программирование на языке Пролог для искусственного интеллекта:
+  пер. с англ. – М.: Мир, 1990. – 560 с.: ил.
+- Братко И. Алгоритмы искусственного интеллекта на языке PROLOG, 3-е издание.:
+  пер. с англ. – М.: ИД «Вильямс», 2004. – 640 с.: ил.
 
 ---
 

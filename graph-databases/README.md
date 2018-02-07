@@ -3,7 +3,7 @@
 - [Краткий обзор свободно-распространяемых графовых СУБД](./graph-databases-short-review.md)
 - [Установка и запуск Neo4j](./neo4j-install-and-run.md)
 - [Основы работы с Neo4j в браузере](./neo4j-basics-with-browser.md)
-- [Введение в язык запросов Cypher](./cypher-intro.md) _(в процессе написания)_
+- [Введение в язык запросов Cypher с параллельным кодом на Prolog](./cypher-intro.md)
 
 ---
 
