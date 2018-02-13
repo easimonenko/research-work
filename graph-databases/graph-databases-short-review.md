@@ -86,6 +86,16 @@
 - не является СУБД, это движок для .Net и Visual Studio
 - лицензия: MIT
 
+## Blazegraph
+
+- <https://www.blazegraph.com/>
+- <https://github.com/blazegraph/database>
+- 248 звёзд на GitHub
+- написана на Java
+- лицензия: GNU GPL 2.0
+- поддержка RDF/SPARQL: есть
+- поддержка Apache TinkerPop: есть
+
 ## VertexDB
 
 - <http://www.dekorte.com/projects/opensource/vertexdb>
