@@ -4,11 +4,12 @@
 
 - <https://neo4j.com/>
 - <https://github.com/neo4j/neo4j>
-- 4633 звезды на GitHub
+- версия: 3.4.0
+- 5148 звезд на GitHub
 - написана на Java
 - язык запросов [Cypher](http://www.opencypher.org/)
-- дополнительно поддерживается язык
-  [Gremlin](https://neo4j-contrib.github.io/gremlin-plugin/)
+- ~~дополнительно поддерживается язык
+  [Gremlin](https://neo4j-contrib.github.io/gremlin-plugin/)~~ (в версии 3 поддержка полностью удалена; потребуется [Gremlin Server](http://tinkerpop.apache.org/))
 - дополнительно поддерживается язык
   [GraphQL](https://github.com/neo4j-contrib/neo4j-graphql)
 - дополнительно поддерживается язык
@@ -22,7 +23,8 @@
 
 - <https://www.arangodb.com/>
 - <https://github.com/arangodb/arangodb>
-- 4965 звёзд на GitHub
+- версия: 3.3.10
+- 5726 звёзд на GitHub
 - написана на C++
 - язык запросов [AQL](https://docs.arangodb.com/latest/AQL/index.html)
 - хорошая документация
@@ -34,7 +36,8 @@
 
 - <http://titan.thinkaurelius.com/>
 - <https://github.com/thinkaurelius/titan/>
-- 4628 звёзд на GitHub
+- версия: 1.0.0
+- 4702 звёзд на GitHub
 - написана на Java
 - поддерживается язык [Gremlin](https://tinkerpop.apache.org/) как основное
   средство работы с базой данных
@@ -45,7 +48,8 @@
 
 - <http://orientdb.com>
 - <https://github.com/orientechnologies/orientdb>
-- 3337 звёзд на GitHub
+- версия: 3.0.1
+- 3503 звёзд на GitHub
 - написана на Java
 - в качестве основного языка запросов используется расширенный
   [SQL](http://orientdb.com/docs/last/SQL.html)
@@ -57,7 +61,8 @@
 
 - <https://www.cayley.io/>
 - <https://github.com/cayleygraph/cayley>
-- 10959 звёзд на GitHub
+- версия: 0.7.4
+- 11390 звёзд на GitHub
 - написана на Go
 - в качестве языков запросов доступны JavaScript и
   [MQL](https://ru.wikipedia.org/wiki/MQL)
@@ -71,7 +76,8 @@
 ## FlockDB
 
 - <https://github.com/twitter-archive/flockdb>
-- 3122 звезды на GitHub
+- версия: 1.8.5
+- 3145 звезды на GitHub
 - написана на Scala
 - не поддерживается
 - требуется сборка из исходников
@@ -81,7 +87,7 @@
 
 - <https://www.graphengine.io>
 - <https://github.com/Microsoft/GraphEngine>
-- 1375 звёзд на GitHub
+- 1510 звёзд на GitHub
 - написана на C# и C++
 - не является СУБД, это движок для .Net и Visual Studio
 - лицензия: MIT
@@ -90,7 +96,8 @@
 
 - <https://www.blazegraph.com/>
 - <https://github.com/blazegraph/database>
-- 248 звёзд на GitHub
+- версия: 2.1.5
+- 267 звёзд на GitHub
 - написана на Java
 - лицензия: GNU GPL 2.0
 - поддержка RDF/SPARQL: есть
@@ -100,7 +107,7 @@
 
 - <http://www.dekorte.com/projects/opensource/vertexdb>
 - <https://github.com/stevedekorte/vertexdb>
-- 281 звезда на GitHub
+- 280 звезда на GitHub
 - написана на C
 - требует сборки из исходных текстов
 - лицензия: BSD
@@ -109,7 +116,8 @@
 
 - <http://bitnine.net/>
 - <https://github.com/bitnine-oss/agensgraph>
-- 484 звезды на GitHub
+- версия: 1.3.1
+- 558 звезды на GitHub
 - написана на C
 - базируется на PostgreSQL
 - в качестве языков запросов доступны SQL и Cypher
@@ -120,7 +128,7 @@
 
 - <http://redisgraph.io/>
 - <https://github.com/swilly22/redis-graph>
-- 245 звёзд на GitHub
+- 384 звёзд на GitHub
 - написана на C
 - требует сборки из исходных текстов
 - лицензия: AGPL 3.0
@@ -128,7 +136,8 @@
 ## Cypher for Apache Spark
 
 - <https://github.com/opencypher/cypher-for-apache-spark>
-- 56 звёзд на GitHub
+- версия: 0.1.1
+- 88 звёзд на GitHub
 - написана на Scala
 - требует сборки из исходных текстов
 - лицензия: Apache 2.0
@@ -137,7 +146,8 @@
 
 - <https://github.com/lambdazen/bitsy/wiki>
 - <https://github.com/lambdazen/bitsy>
-- 5 звёзд на GitHub
+- версия: 3.0.1
+- 19 звёзд на GitHub
 - написана на Java
 - встраиваемая СУБД
 - лицензия: Apache 2.0
