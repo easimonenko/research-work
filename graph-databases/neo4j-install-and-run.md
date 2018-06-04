@@ -1,8 +1,8 @@
 # Установка и запуск Neo4j
 
 В статье рассматривается как установить графовую СУБД Neo4j в среде
-Ubuntu Linux. Часть информации также будет актуальна и для других вариантов
-Linux. Рассматриваемая версия Neo4j 3.3.2.
+Ubuntu Linux 16.04 LTS и 18.04 LTS. Часть информации также будет актуальна и для других вариантов
+Linux. Рассматриваемые версии Neo4j 3.3.2 (в среде 16.04) и 3.4.0 (в среде 18.04).
 
 ## Установка
 
@@ -35,17 +35,45 @@ sudo apt install neo4j-enterprise
 Помимо `neo4j` будут установлены пакеты `cypher-shell` и `daemon`. Установка
 займёт на диске порядка 100Мб.
 
+В Ubuntu 18.04 LTS потребуется также установить JDK 8 и произвести соответствующую настройку (так как основной JDK является 11, а Neo4j работает только в JDK 8):
+
+``` sh
+sudo apt install openjdk-8-jre
+```
+
+Затем откройте настройку сервиса Neo4j для редактирования:
+
+``` sh
+sudo systemctl edit neo4j
+```
+
+И добавьте следующие строки:
+
+``` ini
+[Service]
+
+Environment="NEO4J_CONF=/etc/neo4j" "NEO4J_HOME=/var/lib/neo4j" "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64"
+```
+
+Убедитесь, что настройки успешно сохранены:
+
+``` sh
+systemctl cat neo4j
+```
+
 ## Запуск
 
 Запуск в Ubuntu:
 
 ``` sh
+sudo systemctl enable neo4j
 sudo service neo4j start
 ```
 
 Проверка:
 
 ``` sh
+service neo4j status
 http http://localhost:7474
 ```
 
@@ -64,7 +92,14 @@ Server: Jetty(9.2.22.v20170606)
 }
 ```
 
-Если попытаться перейти по ссылке `management`, ввести имя пользователя `neo4j`
+_Примечание._ `http` это утилита аналогичная `curl`, но с улучшенным пользовательским интерфейсом. В Ubuntu 
+18.04 LTS можно установить из стандартного репозитория, а в более ранних версиях через `pip`.
+
+``` sh
+sudo apt install httpie
+```
+
+Если попытаться перейти по ссылке из поля `management`, ввести имя пользователя `neo4j`
 и пароль `neo4j`, то получим отказ с формулировкой
 `"User is required to change their password."`.
 
@@ -83,6 +118,15 @@ Note that Cypher queries must end with a semicolon.
 neo4j>
 ```
 
+_Примечание._ В Ubuntu 18.04 LTS перед вызовом `cypher-shell` потребуется задать `JAVA_HOME`:
+
+``` sh
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 cypher-shell
+```
+
+_Примечание._ Если JDK 11 в среде Ubuntu 18.04 LTS не используется, то можно задать `JAVA_HOME` в 
+`.profile`.
+
 Задание пароля пользователя:
 
 ``` sh
@@ -96,15 +140,19 @@ because live Neo4j-users were detected."_, то нужно остановить 
 sudo service neo4j stop
 ```
 
-удалить файл `/var/lib/neo4j/data/dbms/auth`, повторить установку пароля
+удалить файл `/var/lib/neo4j/data/dbms/auth`:
+
+``` sh
+sudo rm /var/lib/neo4j/data/dbms/auth
+```
+
+и повторить установку пароля, получив при этом сообщение:
 
 ``` plain
 Changed password for user 'neo4j'.
 ```
 
-и перезапустить сервер.
-
-
+Теперь перезапустите сервер:
 
 ``` sh
 sudo service neo4j restart
@@ -112,7 +160,11 @@ sudo service neo4j restart
 
 Для работы с Neo4j в браузере нужно перейти по ссылке
 <http://localhost:7474/browser/>. После чего откроется великолепный
-веб-интерфейс:
+веб-интерфейс с формой подключения к базе данных:
+
+![Neo4j browser: connect to database](./images/neo4j-browser-connect.png)
+
+После входа должны увидеть:
 
 ![Neo4j browser: home screen](./images/neo4j-browser-home.png)
 
