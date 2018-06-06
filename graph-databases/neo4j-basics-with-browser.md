@@ -4,8 +4,8 @@
 _Neo4j Browser_. Это руководство может быть полезным как дополнение к книге
 Редмонда и Уилсона "Семь баз данных за семь недель", так как рассматриваемый
 веб-интерфейс был полностью переработан. О том как установить и запустить Neo4j
-можно прочитать [здесь](./neo4j-install-and-run.md). Рассматриваемая версия
-Neo4j 3.3.2, Neo4j Browser 3.1.4.
+можно прочитать [здесь](./neo4j-install-and-run.md). Рассматриваемые версии
+Neo4j 3.3.2 и 3.4.0, Neo4j Browser 3.1.4 и 3.1.12.
 
 ## Начало работы
 
@@ -111,7 +111,13 @@ MATCH (ee:Person) RETURN ee.name
 
 ![Neo4j Browser: property match result](./images/neo4j-cypher-match-property.png)
 
-А можем запросить все узлы данного типа:
+_Примечание._ Как и в SQL есть возможность упорядочить извлекаемые данные по какому-либо полю:
+
+``` cypher
+MATCH (ee:Person) RETURN ee.name ORDER BY ee.name
+```
+
+Далее можем запросить все узлы данного типа:
 
 ``` cypher
 MATCH (ee:Person) RETURN ee
@@ -123,6 +129,9 @@ MATCH (ee:Person) RETURN ee
 узлы в графическом виде:
 
 ![Neo4j Browser: graph match result](./images/neo4j-cypher-match-graph.png)
+
+_Примечание._ В версии 3.4 по-умолчанию как-раз открывается графическое представление. Для получения 
+табличного представления нужно щёлкнуть на кнопку с надписью "Table". Хотя, бывает и наоборот.
 
 Добавим связь между узлами:
 
@@ -144,7 +153,10 @@ CREATE (e)-[:KNOWS]->(d),
 ## Ссылки
 
 - [Neo4j Browser User Interface Guide](https://neo4j.com/developer/guide-neo4j-browser/)
+- [The Neo4j Developer Manual v3.4](https://neo4j.com/docs/developer-manual/3.4/)
 - [The Neo4j Developer Manual v3.3](https://neo4j.com/docs/developer-manual/3.3/)
+- [Neo4j Graph Database Sandbox](https://neo4j.com/sandbox-v2/)
+- [Neo4j GraphGists](https://neo4j.com/graphgists/)
 
 ---
 
