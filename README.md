@@ -5,6 +5,7 @@
 
 - [Материалы по децентрализованным приложениям и системам](./decentralized-applications-and-systems)
 - [Материалы по графовым базам данных](./graph-databases)
+- [Материалы по высокопроизводительным вычислениям и системам](./high-performance-systems)
 - [Презентация о релевантной логике](./relevance-logic-presentation)
 - [Доклад об arXiv.org](./arxiv.org-presentation)
 - [Материалы по OAI-PMH](./oai-pmh-materials)
