@@ -1,0 +1,38 @@
+[
+    {
+        "github-name": "awwright/node-rdf",
+        "npm-name": "rdf"
+    },
+    {
+        "github-name": "antoniogarrote/rdfstore-js",
+        "npm-name": "rdfstore"
+    },
+    {
+        "github-name": "rdfjs/N3.js",
+        "npm-name": "n3"
+    },
+    {
+        "github-name": "RubenVerborgh/SPARQL.js",
+        "npm-name": "sparqljs"
+    },
+    {
+        "github-name": "digitalbazaar/jsonld.js",
+        "npm-name": "jsonld"
+    },
+    {
+        "github-name": "alexmilowski/green-turtle",
+        "npm-name": "green-turtle"
+    },
+    {
+        "github-name": "rdf-ext/rdf-ext",
+        "npm-name": "rdf-ext"
+    },
+    {
+        "github-name": "linkeddata/rdflib.js",
+        "npm-name": "rdflib"
+    },
+    {
+        "github-name": "blake-regalia/graphy.js",
+        "npm-name": "graphy"
+    }
+]
