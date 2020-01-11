@@ -1,0 +1,27 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Scripts of research work",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easimonenko/research-work.git"
+  },
+  "keywords": [
+    "research"
+  ],
+  "author": "Evgeny Simonenko <easimonenko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easimonenko/research-work/issues"
+  },
+  "homepage": "https://github.com/easimonenko/research-work#readme",
+  "dependencies": {
+    "commander": "^4.1.0",
+    "handlebars": "^4.0.5"
+  },
+  "private": true
+}
