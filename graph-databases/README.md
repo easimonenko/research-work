@@ -6,6 +6,7 @@
 - [Введение в язык запросов Cypher с параллельным кодом на Prolog](./cypher-intro.md)
 - [Gremlin с Neo4j](./gremlin-with-neo4j.md)
 - [Протокол Bolt, версия 1 (перевод)](./bolt-protocol-v1.md) (_в процессе_)
+- [Установка и запуск Blazegraph](blazegraph-install-and-run.md)
 - [Библиография](./bibliography.md) (_в процессе_)
 
 ## Смежные вопросы теории графов
@@ -14,4 +15,4 @@
 
 ---
 
-(c) Симоненко Евгений, 2018
+(c) Симоненко Евгений, 2018, 2020
