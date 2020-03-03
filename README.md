@@ -3,14 +3,13 @@
 Материалы научно-исследовательской работы Симоненко Евгения Анатольевича
 <easimonenko@mail.ru>.
 
-- [Материалы по графовым базам данных](./graph-databases)
-- [Материалы по семантическому вебу](./semantic-web)
-- [Материалы по базам данных временных рядов](./time-series-databases)
-- [Материалы по децентрализованным приложениям и системам](./decentralized-applications-and-systems)
-- [Материалы по высокопроизводительным вычислениям и системам](./high-performance-systems)
+- [Графовые базы данных (Graph Databases)](./graph-databases)
+- [Семантический веб (Semantic Web)](./semantic-web)
+- [Открытая наука (Open Science)](./open-science)
+- [Базы данных временных рядов (Time Series Databases)](./time-series-databases)
+- [Децентрализованные приложения и системы (Decentralized Applications and Systems)](./decentralized-applications-and-systems)
+- [Высокопроизводительные вычисления и системы (High Performance Systems)](./high-performance-systems)
 - [Презентация о релевантной логике](./relevance-logic-presentation)
-- [Доклад об arXiv.org](./arxiv.org-presentation)
-- [Материалы по OAI-PMH](./oai-pmh-materials)
 - [Проект Repository Aggregator](./repository-aggregator)
 
 ---
