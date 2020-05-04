@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/easimonenko/research-work#readme",
   "dependencies": {
-    "commander": "^4.1.0",
-    "handlebars": "^4.0.5"
+    "commander": "^5.1.0",
+    "handlebars": "^4.7.6"
   },
   "private": true
 }
