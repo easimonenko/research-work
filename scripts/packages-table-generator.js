@@ -3,6 +3,7 @@
 /**
  * scripts/packages-table-generator.js
  * Generates of packages table from data from GitHub and NPM.
+ * DEPRECATED.
  * License: MIT
  * (c) 2016, 2019, 2020 Evgeny Simonenko <easimonenko@gmail.com>
  */
