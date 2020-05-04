@@ -4,7 +4,7 @@ _Так как число звёзд на NPM больше не поддержи
 лучше смотреть на количество звёзд на GitHub._
 
 | # | Package | Stars | Last Version | Last Update | Created | Dependencies |
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 | 1 | [jsonld](https://www.npmjs.org/package/jsonld) | 8 | 3.1.0 | 2020-04-16 | 2012-09-05 | 7 |
 | 2 | [rdfstore](https://www.npmjs.org/package/rdfstore) | 6 | 0.9.17 | 2016-12-25 | 2011-06-12 | 4 |
 | 3 | [sparqljs](https://www.npmjs.org/package/sparqljs) | 5 | 3.0.1 | 2019-11-20 | 2014-08-22 | 1 |
