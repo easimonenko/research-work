@@ -11,12 +11,14 @@ const commander = require('commander')
 const fs = require('fs')
 const handlebars = require('handlebars')
 
-commander.option('-t, --template <path>', 'Path to template file.')
-    .option('-i, --info <path>', 'Path to GitHub repositories info in JSON.')
+commander.requiredOption('-t, --template <path>', 'Path to template file.')
+    .requiredOption('-i, --info <path>', 'Path to GitHub repositories info in JSON.')
+    .option('-n, --name <path>', 'Path to file in JSON format with names of software.')
     .parse(process.argv)
 
 const TEMPLATE = commander['template']
 const REPOSITORIES_INFO = commander['info']
+const SOFTWARE_INFO = commander['name']
 
 const repositories_info = require(`${process.cwd()}/${REPOSITORIES_INFO}`)
 
@@ -43,6 +45,18 @@ repositories_info.sort((a, b) => {
 repositories_info.forEach((p, i) => {
     p['number'] = i + 1
 })
+
+if (SOFTWARE_INFO) {
+    const software_info = require(`${process.cwd()}/${SOFTWARE_INFO}`)
+    for (let i = 0; i < repositories_info.length; i++) {
+	for (let sw of software_info) {
+	    if (sw['github'] == repositories_info[i]['full_name']) {
+		repositories_info[i]['name'] = sw['name']
+		break
+	    }
+	}
+    }
+}
 
 const tTable = fs.readFileSync(TEMPLATE)
 const ctTable = handlebars.compile(tTable.toString())
