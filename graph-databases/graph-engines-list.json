@@ -1,0 +1,27 @@
+[
+    {
+	"name": "GraphEngine",
+	"homepage": "https://www.graphengine.io",
+	"github": "Microsoft/GraphEngine"
+    },
+    {
+	"name": "Tinkerpop",
+	"homepage": "http://tinkerpop.apache.org",
+	"github": "apache/tinkerpop"
+    },
+    {
+	"name": "RedisGraph",
+	"homepage": "https://oss.redislabs.com/redisgraph",
+	"github": "RedisGraph/RedisGraph"
+    },
+    {
+	"name": "Morpheus",
+	"homepage": "",
+	"github": "opencypher/morpheus"
+    },
+    {
+	"name": "Bitsy",
+	"homepage": "https://github.com/lambdazen/bitsy/wiki",
+	"github": "lambdazen/bitsy"
+    }
+]

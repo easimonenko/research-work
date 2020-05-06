@@ -2,6 +2,14 @@
 
 ## Обновления
 
+### 2020-05-07
+
+- Обзор теперь представлен в виде сводных таблиц. Таблица генерируется с
+  использованием скриптов из раздела [scripts](../scripts).
+- JanusGraph обошёл FlockDB.
+- В таблицах расширенный список графовых СУБД. Добавлены раннее не
+  рассматривавшиеся.
+
 ### 2020-02-23
 
 - Добавлена JanusGraph.
@@ -11,21 +19,41 @@
 
 Этот обзор не обновлялся больше года. Из существенного:
 
-- Добавлена Dgraph; интересно, что эта СУБД опережает по числу звезд такие фавориты как ArangoDB и Neo4j.
-- Возродилась Blazegraph; в принципе, новый выпуск был сделан ещё в марте 2018, но за год она обошла по звёздам VertexDB.
+- Добавлена Dgraph; интересно, что эта СУБД опережает по числу звезд такие
+  фавориты как ArangoDB и Neo4j.
+- Возродилась Blazegraph; в принципе, новый выпуск был сделан ещё в марте 2018, но
+  за год она обошла по звёздам VertexDB.
 - Не видно активной разработки Redis Graph.
 - Cypher for Apache Spark переименован в Morpheus.
 - Возродилась Bitsy v3.
 
 _Сначала полноценные СУБД в порядке числа звёзд на GitHub._
 
+| # | Name | Repository | Stars | Language | License | Last Commit | Created |
+|-|-|-|-|-|-|-|-|
+| 1 | Cayley | [cayleygraph/cayley](https://github.com/cayleygraph/cayley) | 13358 | Go | Apache License 2.0 | 2020-04-30 | 2014-06-05 |
+| 2 | Dgraph | [dgraph-io/dgraph](https://github.com/dgraph-io/dgraph) | 13095 | Go | Other | 2020-05-05 | 2015-08-25 |
+| 3 | ArangoDB | [arangodb/arangodb](https://github.com/arangodb/arangodb) | 9510 | C++ | Apache License 2.0 | 2020-05-05 | 2011-10-26 |
+| 4 | Neo4j | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 7683 | Java |  | 2020-05-04 | 2012-11-12 |
+| 5 | Titan | [thinkaurelius/titan](https://github.com/thinkaurelius/titan) | 5035 | Java | Apache License 2.0 | 2015-12-03 | 2012-02-26 |
+| 6 | OrientDB | [orientechnologies/orientdb](https://github.com/orientechnologies/orientdb) | 4131 | Java | Apache License 2.0 | 2020-05-05 | 2012-12-10 |
+| 7 | JanusGraph | [JanusGraph/janusgraph](https://github.com/JanusGraph/janusgraph) | 3288 | Java | Other | 2020-05-02 | 2016-12-26 |
+| 8 | FlockDB | [twitter-archive/flockdb](https://github.com/twitter-archive/flockdb) | 3227 | Scala | Other | 2017-03-17 | 2010-04-12 |
+| 9 | NebulaGraph | [vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) | 2802 | C++ | Apache License 2.0 | 2020-04-30 | 2018-08-28 |
+| 10 | Grakn | [graknlabs/grakn](https://github.com/graknlabs/grakn) | 2047 | Java | GNU Affero General Public License v3.0 | 2020-05-05 | 2016-07-12 |
+| 11 | HugeGraph | [hugegraph/hugegraph](https://github.com/hugegraph/hugegraph) | 1175 | Java | Apache License 2.0 | 2020-04-24 | 2018-07-18 |
+| 12 | AgensGraph | [bitnine-oss/agensgraph](https://github.com/bitnine-oss/agensgraph) | 942 | C | Other | 2020-01-25 | 2016-04-29 |
+| 13 | Virtuoso | [openlink/virtuoso-opensource](https://github.com/openlink/virtuoso-opensource) | 628 | C | Other | 2020-01-20 | 2012-03-21 |
+| 14 | TerminusDB | [terminusdb/terminus-server](https://github.com/terminusdb/terminus-server) | 504 | Prolog | GNU General Public License v3.0 | 2020-04-29 | 2019-07-23 |
+| 15 | Blazegraph | [blazegraph/database](https://github.com/blazegraph/database) | 473 | Java | GNU General Public License v2.0 | 2019-03-19 | 2015-12-22 |
+| 16 | VertexDB | [stevedekorte/vertexdb](https://github.com/stevedekorte/vertexdb) | 288 | C | Other | 2018-01-21 | 2009-06-29 |
+| 17 | HGraphDB | [rayokota/hgraphdb](https://github.com/rayokota/hgraphdb) | 201 | Java | Apache License 2.0 | 2020-05-05 | 2016-11-09 |
+
 ## Cayley
 
 - <https://www.cayley.io/>
 - <https://github.com/cayleygraph/cayley>
 - версия: 0.7.7
-- 13203 звёзд на GitHub
-- написана на Go
 - в качестве языков запросов доступны JavaScript и
   [MQL](https://ru.wikipedia.org/wiki/MQL)
 - в качестве движков хранения данных использует другие СУБД
@@ -39,9 +67,7 @@ _Сначала полноценные СУБД в порядке числа з�
 
 - <https://dgraph.io/>
 - <https://github.com/dgraph-io/dgraph>
-- версия: 1.2.1 и 2.0.0-rc1
-- 12500 звёзд на GitHub
-- написана на Go
+- версия: 1.2.3 и 20.03.1
 - язык запросов GraphQL
 - лицензия: Apache 2.0 и собственная
 
@@ -49,9 +75,7 @@ _Сначала полноценные СУБД в порядке числа з�
 
 - <https://www.arangodb.com/>
 - <https://github.com/arangodb/arangodb>
-- версия: 3.6.1
-- 9255 звёзд на GitHub
-- написана на C++
+- версия: 3.6.3.1
 - язык запросов [AQL](https://docs.arangodb.com/latest/AQL/index.html)
 - хорошая документация
 - есть пакеты для многих операционных систем
@@ -62,12 +86,12 @@ _Сначала полноценные СУБД в порядке числа з�
 
 - <https://neo4j.com/>
 - <https://github.com/neo4j/neo4j>
-- версия: 3.5.15 и 4.0.0
-- 7450 звезд на GitHub
-- написана на Java
+- версия: 3.5.16 и 4.0.3
 - язык запросов [Cypher](http://www.opencypher.org/)
 - ~~дополнительно поддерживается язык
-  [Gremlin](https://neo4j-contrib.github.io/gremlin-plugin/)~~ (в версии 3 поддержка полностью удалена; потребуется [Gremlin Server](http://tinkerpop.apache.org/))
+  [Gremlin](https://neo4j-contrib.github.io/gremlin-plugin/)~~ (в версии 3
+  поддержка полностью удалена; потребуется
+  [Gremlin Server](http://tinkerpop.apache.org/))
 - дополнительно поддерживается язык
   [GraphQL](https://github.com/neo4j-contrib/neo4j-graphql)
 - дополнительно поддерживается язык
@@ -82,8 +106,6 @@ _Сначала полноценные СУБД в порядке числа з�
 - <http://titan.thinkaurelius.com/>
 - <https://github.com/thinkaurelius/titan/>
 - версия: 1.0.0
-- 5013 звёзд на GitHub
-- написана на Java
 - поддерживается язык [Gremlin](https://tinkerpop.apache.org/) как основное
   средство работы с базой данных
 - в качестве движков хранения данных использует другие СУБД
@@ -94,32 +116,26 @@ _Сначала полноценные СУБД в порядке числа з�
 
 - <http://orientdb.com>
 - <https://github.com/orientechnologies/orientdb>
-- версия: 3.0.28
-- 4087 звёзд на GitHub
-- написана на Java
+- версия: 3.0.31
 - в качестве основного языка запросов используется расширенный
   [SQL](http://orientdb.com/docs/last/SQL.html)
 - запустить затруднительно, требуется настройка
 - не удалось запустить из-за неясной ошибки аутентификации
 - лицензия: Apache 2.0
 
-## FlockDB
-
-- <https://github.com/twitter-archive/flockdb>
-- версия: 1.8.5
-- 3217 звезды на GitHub
-- написана на Scala
-- _не поддерживается, новые версии не выходят с 2012 года_
-- требуется сборка из исходников
-- лицензия: Apache 2.0
-
 ## JanusGraph
 
 - <https://janusgraph.org/>
 - <https://github.com/JanusGraph/janusgraph>
-- версия: 0.4.1
-- 3130 звезды на GitHub
-- написана на Java
+- версия: 0.5.2
+- лицензия: Apache 2.0
+
+## FlockDB
+
+- <https://github.com/twitter-archive/flockdb>
+- версия: 1.8.5
+- _не поддерживается, новые версии не выходят с 2012 года_
+- требуется сборка из исходников
 - лицензия: Apache 2.0
 
 ## AgensGraph
@@ -127,8 +143,6 @@ _Сначала полноценные СУБД в порядке числа з�
 - <https://bitnine.net/>
 - <https://github.com/bitnine-oss/agensgraph>
 - версия: 2.1.2
-- 914 звезды на GitHub
-- написана на C
 - базируется на PostgreSQL
 - в качестве языков запросов доступны SQL и Cypher
 - требует сборки из исходных текстов
@@ -139,8 +153,6 @@ _Сначала полноценные СУБД в порядке числа з�
 - <https://www.blazegraph.com/>
 - <https://github.com/blazegraph/database>
 - версия: 2.1.6
-- 447 звёзд на GitHub
-- написана на Java
 - поддержка RDF/SPARQL: есть
 - поддержка Apache TinkerPop: есть
 - лицензия: GNU GPL 2.0
@@ -149,31 +161,41 @@ _Сначала полноценные СУБД в порядке числа з�
 
 - <http://www.dekorte.com/projects/opensource/vertexdb>
 - <https://github.com/stevedekorte/vertexdb>
-- 287 звезда на GitHub
-- написана на C
 - требует сборки из исходных текстов
 - _нет выпусков на GitHub_
 - лицензия: BSD
 
 _Теперь движки для встраивания._
 
+| # | Name | Repository | Stars | Language | License | Last Commit | Created |
+|-|-|-|-|-|-|-|-|
+| 1 | GraphEngine | [microsoft/GraphEngine](https://github.com/microsoft/GraphEngine) | 1855 | C# | Other | 2019-11-13 | 2017-02-09 |
+| 2 | Tinkerpop | [apache/tinkerpop](https://github.com/apache/tinkerpop) | 1097 | Java | Apache License 2.0 | 2020-04-29 | 2015-02-07 |
+| 3 | RedisGraph | [RedisGraph/RedisGraph](https://github.com/RedisGraph/RedisGraph) | 1010 | C | Other | 2020-05-05 | 2017-03-09 |
+| 4 | Morpheus | [opencypher/morpheus](https://github.com/opencypher/morpheus) | 270 | Scala | Apache License 2.0 | 2019-10-16 | 2016-08-02 |
+| 5 | Bitsy | [lambdazen/bitsy](https://github.com/lambdazen/bitsy) | 82 | Java | Apache License 2.0 | 2020-03-06 | 2017-03-16 |
+
 ## GraphEngine
 
 - <https://www.graphengine.io>
 - <https://github.com/Microsoft/GraphEngine>
-- 1840 звёзд на GitHub
-- написана на C# и C++
 - не является СУБД, это движок для .Net и Visual Studio
 - _нет выпусков на GitHub_
 - лицензия: MIT
+
+## Tinkerpop
+
+- <http://tinkerpop.apache.org/>
+- <https://github.com/apache/tinkerpop>
+- версия: 3.4.6
+- это скорее язык запросов к графовым СУБД, нежели движок
+- лицензия: Apache 2.0
 
 ## RedisGraph
 
 - <https://oss.redislabs.com/redisgraph/>
 - <https://github.com/RedisGraph/RedisGraph>
-- версия: 2.0.4
-- 926 звёзд на GitHub
-- написана на C
+- версия: 2.0.11
 - является модулем для Redis
 - требует сборки из исходных текстов
 - лицензия: Redis Source Available License
@@ -196,8 +218,6 @@ _Теперь движки для встраивания._
 - <https://github.com/opencypher/morpheus>
   (ранее <https://github.com/opencypher/cypher-for-apache-spark>)
 - версия: 0.4.2
-- 261 звёзд на GitHub
-- написана на Scala
 - является дополнением к Apache Spark
 - лицензия: Apache 2.0
 
@@ -206,8 +226,6 @@ _Теперь движки для встраивания._
 - <https://github.com/lambdazen/bitsy/wiki>
 - <https://github.com/lambdazen/bitsy>
 - версия: 3.2.2
-- 77 звёзд на GitHub
-- написана на Java
 - встраиваемая СУБД
 - не видно активной разработки с июля 2019
 - лицензия: Apache 2.0
