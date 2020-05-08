@@ -31,19 +31,19 @@ _Сначала полноценные СУБД в порядке числа з�
 
 | # | Name | Repository | Stars | Language | License | Last Commit | Created |
 |-|-|-|-|-|-|-|-|
-| 1 | Cayley | [cayleygraph/cayley](https://github.com/cayleygraph/cayley) | 13358 | Go | Apache License 2.0 | 2020-04-30 | 2014-06-05 |
-| 2 | Dgraph | [dgraph-io/dgraph](https://github.com/dgraph-io/dgraph) | 13095 | Go | Other | 2020-05-05 | 2015-08-25 |
-| 3 | ArangoDB | [arangodb/arangodb](https://github.com/arangodb/arangodb) | 9510 | C++ | Apache License 2.0 | 2020-05-05 | 2011-10-26 |
-| 4 | Neo4j | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 7683 | Java |  | 2020-05-04 | 2012-11-12 |
-| 5 | Titan | [thinkaurelius/titan](https://github.com/thinkaurelius/titan) | 5035 | Java | Apache License 2.0 | 2015-12-03 | 2012-02-26 |
-| 6 | OrientDB | [orientechnologies/orientdb](https://github.com/orientechnologies/orientdb) | 4131 | Java | Apache License 2.0 | 2020-05-05 | 2012-12-10 |
-| 7 | JanusGraph | [JanusGraph/janusgraph](https://github.com/JanusGraph/janusgraph) | 3288 | Java | Other | 2020-05-02 | 2016-12-26 |
+| 1 | [Cayley](https://cayley.io) | [cayleygraph/cayley](https://github.com/cayleygraph/cayley) | 13358 | Go | Apache License 2.0 | 2020-04-30 | 2014-06-05 |
+| 2 | [Dgraph](https://dgraph.io) | [dgraph-io/dgraph](https://github.com/dgraph-io/dgraph) | 13095 | Go | Other | 2020-05-05 | 2015-08-25 |
+| 3 | [ArangoDB](https://www.arangodb.com) | [arangodb/arangodb](https://github.com/arangodb/arangodb) | 9510 | C++ | Apache License 2.0 | 2020-05-05 | 2011-10-26 |
+| 4 | [Neo4j](http://neo4j.com) | [neo4j/neo4j](https://github.com/neo4j/neo4j) | 7683 | Java |  | 2020-05-04 | 2012-11-12 |
+| 5 | [Titan](http://titandb.io) | [thinkaurelius/titan](https://github.com/thinkaurelius/titan) | 5035 | Java | Apache License 2.0 | 2015-12-03 | 2012-02-26 |
+| 6 | [OrientDB](http://orientdb.com) | [orientechnologies/orientdb](https://github.com/orientechnologies/orientdb) | 4131 | Java | Apache License 2.0 | 2020-05-05 | 2012-12-10 |
+| 7 | [JanusGraph](https://janusgraph.org) | [JanusGraph/janusgraph](https://github.com/JanusGraph/janusgraph) | 3288 | Java | Other | 2020-05-02 | 2016-12-26 |
 | 8 | FlockDB | [twitter-archive/flockdb](https://github.com/twitter-archive/flockdb) | 3227 | Scala | Other | 2017-03-17 | 2010-04-12 |
-| 9 | NebulaGraph | [vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) | 2802 | C++ | Apache License 2.0 | 2020-04-30 | 2018-08-28 |
-| 10 | Grakn | [graknlabs/grakn](https://github.com/graknlabs/grakn) | 2047 | Java | GNU Affero General Public License v3.0 | 2020-05-05 | 2016-07-12 |
+| 9 | [NebulaGraph](https://nebula-graph.io) | [vesoft-inc/nebula](https://github.com/vesoft-inc/nebula) | 2802 | C++ | Apache License 2.0 | 2020-04-30 | 2018-08-28 |
+| 10 | [Grakn](https://grakn.ai) | [graknlabs/grakn](https://github.com/graknlabs/grakn) | 2047 | Java | GNU Affero General Public License v3.0 | 2020-05-05 | 2016-07-12 |
 | 11 | HugeGraph | [hugegraph/hugegraph](https://github.com/hugegraph/hugegraph) | 1175 | Java | Apache License 2.0 | 2020-04-24 | 2018-07-18 |
-| 12 | AgensGraph | [bitnine-oss/agensgraph](https://github.com/bitnine-oss/agensgraph) | 942 | C | Other | 2020-01-25 | 2016-04-29 |
-| 13 | Virtuoso | [openlink/virtuoso-opensource](https://github.com/openlink/virtuoso-opensource) | 628 | C | Other | 2020-01-20 | 2012-03-21 |
+| 12 | [AgensGraph](http://www.agensgraph.org) | [bitnine-oss/agensgraph](https://github.com/bitnine-oss/agensgraph) | 942 | C | Other | 2020-01-25 | 2016-04-29 |
+| 13 | [Virtuoso](http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/) | [openlink/virtuoso-opensource](https://github.com/openlink/virtuoso-opensource) | 628 | C | Other | 2020-01-20 | 2012-03-21 |
 | 14 | TerminusDB | [terminusdb/terminus-server](https://github.com/terminusdb/terminus-server) | 504 | Prolog | GNU General Public License v3.0 | 2020-04-29 | 2019-07-23 |
 | 15 | Blazegraph | [blazegraph/database](https://github.com/blazegraph/database) | 473 | Java | GNU General Public License v2.0 | 2019-03-19 | 2015-12-22 |
 | 16 | VertexDB | [stevedekorte/vertexdb](https://github.com/stevedekorte/vertexdb) | 288 | C | Other | 2018-01-21 | 2009-06-29 |
@@ -51,7 +51,7 @@ _Сначала полноценные СУБД в порядке числа з�
 
 ## Cayley
 
-- <https://www.cayley.io/>
+- <https://cayley.io>
 - <https://github.com/cayleygraph/cayley>
 - версия: 0.7.7
 - в качестве языков запросов доступны JavaScript и
@@ -114,7 +114,7 @@ _Сначала полноценные СУБД в порядке числа з�
 
 ## OrientDB
 
-- <http://orientdb.com>
+- <https://orientdb.com>
 - <https://github.com/orientechnologies/orientdb>
 - версия: 3.0.31
 - в качестве основного языка запросов используется расширенный
@@ -138,6 +138,23 @@ _Сначала полноценные СУБД в порядке числа з�
 - требуется сборка из исходников
 - лицензия: Apache 2.0
 
+## NebulaGraph
+
+- <https://nebula-graph.io>
+- версия: 1.0.0-RC4
+- лицензия: Apache 2.0
+
+## Grakn
+
+- <https://grakn.ai/>
+- версия: 1.7.1
+- лицензия: GNU AGPLv3
+
+## HugeGraph
+
+- версия: 0.10.4
+- лицензия: Apache 2.0
+
 ## AgensGraph
 
 - <https://bitnine.net/>
@@ -147,6 +164,16 @@ _Сначала полноценные СУБД в порядке числа з�
 - в качестве языков запросов доступны SQL и Cypher
 - требует сборки из исходных текстов
 - лицензия: Apache 2.0
+
+## Virtuoso
+
+- <http://virtuoso.openlinksw.com/dataspace/dav/wiki/Main/>
+- версия: 7.2.5.1
+
+## TerminusDB
+
+- версия: 1.1.3
+- лицензия: GNU GPLv3
 
 ## Blazegraph
 
@@ -165,13 +192,18 @@ _Сначала полноценные СУБД в порядке числа з�
 - _нет выпусков на GitHub_
 - лицензия: BSD
 
+## HGraphDB
+
+- версия: 3.0.0
+- лицензия: Apache 2.0
+
 _Теперь движки для встраивания._
 
 | # | Name | Repository | Stars | Language | License | Last Commit | Created |
 |-|-|-|-|-|-|-|-|
-| 1 | GraphEngine | [microsoft/GraphEngine](https://github.com/microsoft/GraphEngine) | 1855 | C# | Other | 2019-11-13 | 2017-02-09 |
-| 2 | Tinkerpop | [apache/tinkerpop](https://github.com/apache/tinkerpop) | 1097 | Java | Apache License 2.0 | 2020-04-29 | 2015-02-07 |
-| 3 | RedisGraph | [RedisGraph/RedisGraph](https://github.com/RedisGraph/RedisGraph) | 1010 | C | Other | 2020-05-05 | 2017-03-09 |
+| 1 | [GraphEngine](https://www.graphengine.io/) | [microsoft/GraphEngine](https://github.com/microsoft/GraphEngine) | 1855 | C# | Other | 2019-11-13 | 2017-02-09 |
+| 2 | [Tinkerpop](https://tinkerpop.apache.org/) | [apache/tinkerpop](https://github.com/apache/tinkerpop) | 1097 | Java | Apache License 2.0 | 2020-04-29 | 2015-02-07 |
+| 3 | [RedisGraph](https://redisgraph.io) | [RedisGraph/RedisGraph](https://github.com/RedisGraph/RedisGraph) | 1010 | C | Other | 2020-05-05 | 2017-03-09 |
 | 4 | Morpheus | [opencypher/morpheus](https://github.com/opencypher/morpheus) | 270 | Scala | Apache License 2.0 | 2019-10-16 | 2016-08-02 |
 | 5 | Bitsy | [lambdazen/bitsy](https://github.com/lambdazen/bitsy) | 82 | Java | Apache License 2.0 | 2020-03-06 | 2017-03-16 |
 

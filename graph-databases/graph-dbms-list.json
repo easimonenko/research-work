@@ -1,7 +1,7 @@
 [
     {
 	"name": "Cayley",
-	"homepage": "https://www.cayley.io",
+	"homepage": "https://cayley.io",
 	"github": "cayleygraph/cayley"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
 	"name": "OrientDB",
-	"homepage": "http://orientdb.com",
+	"homepage": "https://orientdb.com",
 	"github": "orientechnologies/orientdb"
     },
     {
