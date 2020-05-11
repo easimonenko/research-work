@@ -1,0 +1,102 @@
+[
+    {
+	"name": "Prometheus",
+	"homepage": "https://prometheus.io",
+	"github": "prometheus/prometheus"
+    },
+    {
+	"name": "InfluxDB",
+	"homepage": "https://www.influxdata.com/time-series-platform/influxdb",
+	"github": "influxdata/influxdb"
+    },
+    {
+	"name": "TimescaleDB",
+	"homepage": "https://www.timescale.com",
+	"github": "timescale/timescaledb"
+    },
+    {
+	"name": "Druid",
+	"homepage": "http://druid.io",
+	"github": "apache/druid"
+    },
+    {
+	"name": "OpenTSDB",
+	"homepage": "http://opentsdb.net",
+	"github": "OpenTSDB/opentsdb"
+    },
+    {
+	"name": "VictoriaMetrics",
+	"homepage": "https://victoriametrics.com",
+	"github": "VictoriaMetrics/VictoriaMetrics"
+    },
+    {
+	"name": "KairosDB",
+	"homepage": "https://kairosdb.github.io",
+	"github": "kairosdb/kairosdb"
+    },
+    {
+	"name": "GridDB",
+	"homepage": "https://griddb.net",
+	"github": "griddb/griddb_nosql"
+    },
+    {
+	"name": "Whisper (Graphite)",
+	"homepage": "https://graphiteapp.org",
+	"github": "graphite-project/whisper"
+    },
+    {
+	"name": "Heroic",
+	"homepage": "https://spotify.github.io/heroic/",
+	"github": "spotify/heroic"
+    },
+    {
+	"name": "DalmatinerDB",
+	"homepage": "https://dalmatiner.io",
+	"github": "dalmatinerdb/dalmatinerdb"
+    },
+    {
+	"name": "Blueflood",
+	"homepage": "http://blueflood.io",
+	"github": "rackerlabs/blueflood"
+    },
+    {
+	"name": "Akumuli",
+	"homepage": "https://akumuli.org",
+	"github": "akumuli/Akumuli"
+    },
+    {
+	"name": "QuestDB",
+	"homepage": "https://www.questdb.io",
+	"github": "questdb/questdb"
+    },
+    {
+	"name": "Warp 10 Platform",
+	"homepage": "https://www.warp10.io",
+	"github": "senx/warp10-platform"
+    },
+    {
+	"name": "Axibase TSDB",
+	"homepage": "https://axibase.com/products/axibase-time-series-database",
+	"github": "axibase/atsd"
+    },
+    {
+	"name": "Hawkular",
+	"homepage": "https://www.hawkular.org",
+	"github": "hawkular/hawkular-metrics"
+    },
+    {
+	"name": "SiriDB",
+	"homepage": "https://siridb.net",
+	"github": "SiriDB/siridb-server"
+    },
+    {
+	"name": "SiteWhere",
+	"homepage": "https://sitewhere.io",
+	"github": "sitewhere/sitewhere"
+    },
+    {
+	"name": "Newts",
+	"homepage": "http://opennms.github.io/newts/",
+	"github": "OpenNMS/newts"
+    }
+]
