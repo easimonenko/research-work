@@ -3,6 +3,7 @@
 Материалы научно-исследовательской работы Симоненко Евгения Анатольевича
 <easimonenko@mail.ru>.
 
+- [Встраиваемые системы](./embedded-systems)
 - [Графовые базы данных (Graph Databases)](./graph-databases)
 - [Семантический веб (Semantic Web)](./semantic-web)
 - [Открытая наука (Open Science)](./open-science)
