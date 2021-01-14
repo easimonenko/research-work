@@ -2,13 +2,16 @@
 
 В статье рассматривается как установить графовую СУБД Neo4j в среде
 Ubuntu Linux 16.04 LTS и 18.04 LTS. Часть информации также будет актуальна и для других вариантов
-Linux. Рассматриваемые версии Neo4j 3.3.2 (в среде 16.04) и 3.4.0 (в среде 18.04).
+Linux. Рассматриваемые версии Neo4j: 3.3.2 (в среде 16.04), 3.4.0 (в среде 18.04)
+4.2.2 (в среде 18.04).
 
 ## Установка
 
 Официальные инструкции по установке Neo4j в Debian и в Ubuntu
-[здесь](http://debian.neo4j.org/) и [здесь](http://neo4j.com/docs/operations-manual/current/installation/linux/debian/).
-Инструкции по установке в другие операционные системы можно найти [здесь](https://neo4j.com/download/other-releases/).
+[здесь](http://debian.neo4j.com/) и
+[здесь](http://neo4j.com/docs/operations-manual/current/installation/linux/debian/).
+Инструкции по установке в другие операционные системы можно найти
+[здесь](https://neo4j.com/download/other-releases/).
 
 Как обычно в Debian и в Ubuntu установка сводится к добавлению ключа,
 добавлению источника пакетов, обновлению локального кэша и собственно установке
@@ -35,7 +38,9 @@ sudo apt install neo4j-enterprise
 Помимо `neo4j` будут установлены пакеты `cypher-shell` и `daemon`. Установка
 займёт на диске порядка 100Мб.
 
-В Ubuntu 18.04 LTS потребуется также установить JDK 8 и произвести соответствующую настройку (так как основной JDK является 11, а Neo4j работает только в JDK 8):
+В Ubuntu 18.04 LTS для версий 3.x потребуется также установить JDK 8
+и произвести соответствующую настройку (так как основной JDK является 11,
+а Neo4j этих версий работает только в JDK 8):
 
 ``` sh
 sudo apt install openjdk-8-jre
@@ -60,6 +65,8 @@ Environment="NEO4J_CONF=/etc/neo4j" "NEO4J_HOME=/var/lib/neo4j" "JAVA_HOME=/usr/
 ``` sh
 systemctl cat neo4j
 ```
+
+Для версий 4.x напротив требуется JDK 11.
 
 ## Запуск
 
@@ -92,8 +99,10 @@ Server: Jetty(9.2.22.v20170606)
 }
 ```
 
-_Примечание._ `http` это утилита аналогичная `curl`, но с улучшенным пользовательским интерфейсом. В Ubuntu 
-18.04 LTS можно установить из стандартного репозитория, а в более ранних версиях через `pip`.
+_Примечание._ `http` это утилита аналогичная `curl`, но с улучшенным
+пользовательским интерфейсом. В Ubuntu 18.04 LTS её можно установить из
+стандартного репозитория из [PyPI](https://pypi.org/),
+а в более ранних версиях через `pip`.
 
 ``` sh
 sudo apt install httpie
@@ -118,14 +127,15 @@ Note that Cypher queries must end with a semicolon.
 neo4j>
 ```
 
-_Примечание._ В Ubuntu 18.04 LTS перед вызовом `cypher-shell` потребуется задать `JAVA_HOME`:
+_Примечание._ В Ubuntu 18.04 LTS для версий 3.x перед вызовом `cypher-shell`
+потребуется задать `JAVA_HOME`:
 
 ``` sh
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 cypher-shell
 ```
 
-_Примечание._ Если JDK 11 в среде Ubuntu 18.04 LTS не используется, то можно задать `JAVA_HOME` в 
-`.profile`.
+_Примечание._ Если JDK 11 в среде Ubuntu 18.04 LTS не используется,
+то можно задать `JAVA_HOME` в `.profile`.
 
 Задание пароля пользователя:
 
@@ -168,6 +178,8 @@ sudo service neo4j restart
 
 ![Neo4j browser: home screen](./images/neo4j-browser-home.png)
 
+_Примечание._ Cycli больше не поддерживается, его репозиторий заархивирован.
+
 Вместо `cypher-shell` можно установить альтернативный клиент
 [cycli](https://github.com/nicolewhite/cycli):
 
@@ -194,6 +206,29 @@ Bug reports: https://github.com/nicolewhite/cycli/issues
 Goodbye!
 ```
 
+## Миграция с версии 3.5 на 4.x
+
+- В Ubuntu Linux для обновления сервера нужно переустановить источник пакетов.
+  На страничке [репозитория APT](http://debian.neo4j.com) для установки
+  свежей версии есть только один вариант ссылок с указанием версии `latest`.
+  Это скорее всего не лучший вариант и вместо него стоит вписать конкретную
+  версию, чтобы дальнейшие обновления происходили только в рамках неё. Например:
+
+  ```
+  https://debian.neo4j.com stable latest
+  https://debian.neo4j.com stable 4.2
+  ```
+
+- После чего обновить информацию о пакетах и установить новую версию Neo4j.
+
+- Вы не сможете сразу начать работать с новой версией и потребуется провести
+  дополнительные манипуляции, которые описаны на страничке официальной
+  документации в разделе
+  [Upgrade a single instance](https://neo4j.com/docs/operations-manual/current/upgrade/deployment-upgrading/)
+
+- После миграции мы получаем новые возможности версии 4.x, например,
+  возможность работы с разными базами данных.
+
 ## Что почитать
 
 Кроме собственно документации на сайте Neo4j есть пара книг на русском языке:
@@ -213,7 +248,7 @@ Goodbye!
 - [Сайт Neo4j](https://neo4j.com/)
 - [Neo4j на GitHub](https://github.com/neo4j/neo4j)
 - [Загрузка различных выпусков Neo4j](https://neo4j.com/download/other-releases/)
-- [Сервер пакетов для Debian/Ubuntu](http://debian.neo4j.org/)
+- [Сервер пакетов для Debian/Ubuntu](http://debian.neo4j.com/)
 - [Инструкции по установке в Debian/Ubuntu](http://neo4j.com/docs/operations-manual/current/installation/linux/debian/)
 - [cycli -- альтернативный клиент Cypher](https://github.com/nicolewhite/cycli)
 
