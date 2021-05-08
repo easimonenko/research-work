@@ -21,7 +21,7 @@
   "homepage": "https://github.com/easimonenko/research-work#readme",
   "dependencies": {
     "commander": "^5.1.0",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.7"
   },
   "private": true
 }
