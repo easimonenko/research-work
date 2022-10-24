@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/easimonenko/research-work#readme",
   "dependencies": {
-    "commander": "^5.1.0",
+    "commander": "^9.4.1",
     "handlebars": "^4.7.6"
   },
   "private": true

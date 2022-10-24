@@ -16,9 +16,10 @@ commander.requiredOption('-t, --template <path>', 'Path to template file.')
     .option('-n, --name <path>', 'Path to file in JSON format with names of software.')
     .parse(process.argv)
 
-const TEMPLATE = commander['template']
-const REPOSITORIES_INFO = commander['info']
-const SOFTWARE_INFO = commander['name']
+const options = commander.opts()
+const TEMPLATE = options['template']
+const REPOSITORIES_INFO = options['info']
+const SOFTWARE_INFO = options['name']
 
 const repositories_info = require(`${process.cwd()}/${REPOSITORIES_INFO}`)
 
@@ -52,6 +53,12 @@ if (SOFTWARE_INFO) {
 	for (let sw of software_info) {
 	    if (sw['github'] == repositories_info[i]['full_name']) {
 		repositories_info[i]['name'] = sw['name']
+                repositories_info[i]['query_language'] = sw['query_language']
+                if ((!!repositories_info[i]['license']
+                     && repositories_info[i]['license']['name'] == "Other")
+                    || !repositories_info[i]['license']) {
+                    repositories_info[i]['license'] = { 'name': sw['license']}
+                }
 		break
 	    }
 	}
