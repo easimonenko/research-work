@@ -1,6 +1,6 @@
 [
     {
-	"name": "GraphEngine",
+	"name": "Graph Engine",
 	"homepage": "https://www.graphengine.io",
 	"github": "Microsoft/GraphEngine"
     },
@@ -11,7 +11,7 @@
     },
     {
 	"name": "RedisGraph",
-	"homepage": "https://oss.redislabs.com/redisgraph",
+	"homepage": "https://redis.io/docs/stack/graph/",
 	"github": "RedisGraph/RedisGraph"
     },
     {

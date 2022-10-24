@@ -1,87 +1,118 @@
 [
     {
-	"name": "Cayley",
-	"homepage": "https://cayley.io",
-	"github": "cayleygraph/cayley"
+        "name": "Cayley",
+        "homepage": "https://cayley.io",
+        "github": "cayleygraph/cayley",
+        "query_language": "MQL"
     },
     {
 	"name": "Dgraph",
 	"homepage": "https://dgraph.io",
-	"github": "dgraph-io/dgraph"
+	"github": "dgraph-io/dgraph",
+        "query_language": "GraphQL",
+        "license": "Apache License 2.0"
     },
     {
 	"name": "ArangoDB",
 	"homepage": "https://www.arangodb.com",
-	"github": "arangodb/arangodb"
+	"github": "arangodb/arangodb",
+        "query_language": "AQL"
     },
     {
 	"name": "Neo4j",
 	"homepage": "https://neo4j.com",
-	"github": "neo4j/neo4j"
+	"github": "neo4j/neo4j",
+        "query_language": "Cypher",
+        "license": "GNU General Public License v3.0"
     },
     {
 	"name": "Titan",
-	"homepage": "http://titan.thinkaurelius.com",
-	"github": "thinkaurelius/titan"
+	"homepage": "https://titan.thinkaurelius.com",
+	"github": "thinkaurelius/titan",
+        "query_language": "Gremlin"
     },
     {
 	"name": "OrientDB",
-	"homepage": "https://orientdb.com",
-	"github": "orientechnologies/orientdb"
+	"homepage": "https://orientdb.org",
+	"github": "orientechnologies/orientdb",
+        "query_language": "SQL"
     },
     {
 	"name": "FlockDB",
 	"homepage": "",
-	"github": "twitter-archive/flockdb"
+	"github": "twitter-archive/flockdb",
+        "license": "Apache License 2.0"
     },
     {
 	"name": "JanusGraph",
 	"homepage": "https://janusgraph.org",
-	"github": "JanusGraph/janusgraph"
+	"github": "JanusGraph/janusgraph",
+        "license": "Apache License 2.0"
     },
     {
 	"name": "NebulaGraph",
-	"homepage": "https://nebula-graph.io",
+	"homepage": "https://www.nebula-graph.io",
 	"github": "vesoft-inc/nebula"
     },
     {
-	"name": "Grakn",
-	"homepage": "https://grakn.ai",
-	"github": "graknlabs/grakn"
+	"name": "TypeDB",
+	"homepage": "https://vaticle.com",
+	"github": "vaticle/typedb"
     },
     {
 	"name": "AgensGraph",
 	"homepage": "https://bitnine.net",
-	"github": "bitnine-oss/agensgraph"
+	"github": "bitnine-oss/agensgraph",
+        "query_language": "Cypher"
     },
     {
 	"name": "Virtuoso",
-	"homepage": "http://vos.openlinksw.com/owiki/wiki/VOS/",
-	"github": "openlink/virtuoso-opensource"
+	"homepage": "",
+	"github": "openlink/virtuoso-opensource",
+        "license": "GNU General Public License v2.0"
     },
     {
 	"name": "Blazegraph",
 	"homepage": "https://www.blazegraph.com",
-	"github": "blazegraph/database"
+	"github": "blazegraph/database",
+        "query_language": "SPARQL"
     },
     {
 	"name": "TerminusDB",
 	"homepage": "https://terminusdb.com",
-	"github": "terminusdb/terminus-server"
+	"github": "terminusdb/terminusdb"
     },
     {
 	"name": "HugeGraph",
-	"homepage": "",
-	"github": "hugegraph/hugegraph"
+	"homepage": "https://hugegraph.apache.org",
+	"github": "apache/incubator-hugegraph"
     },
     {
 	"name": "VertexDB",
 	"homepage": "http://www.dekorte.com/projects/opensource/vertexdb",
-	"github": "stevedekorte/vertexdb"
+	"github": "stevedekorte/vertexdb",
+        "license": "BSD License (3-Clause)"
     },
     {
 	"name": "HGraphDB",
 	"homepage": "",
 	"github": "rayokota/hgraphdb"
+    },
+    {
+        "name": "Fluree",
+        "homepage": "https://flur.ee",
+        "github": "fluree/db",
+        "license": "Eclipse Public License v2.0"
+    },
+    {
+        "name": "SurrealDB",
+        "homepage": "https://surrealdb.com",
+        "github": "surrealdb/surrealdb",
+        "license": "Business Source License 1.1"
+    },
+    {
+        "name": "ArcadeDB",
+        "homepage": "https://arcadedb.com",
+        "github": "ArcadeData/arcadedb"
     }
 ]
