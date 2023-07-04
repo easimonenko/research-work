@@ -11,7 +11,7 @@
 полями:
 
 - `name`: название программного обеспечения;
-- `github-name`: полное название репозитория на GitHub;
+- `github`: полное название репозитория на GitHub;
 - `npm-name`: название пакета NPM (если применимо).
 
 Например:
@@ -20,12 +20,12 @@
 [
   {
     "name": "commander",
-    "github-name": "tj/commander.js",
+    "github": "tj/commander.js",
     "npm-name": "commander"
   },
   {
     "name": "minimist",
-    "github-name": "substack/minimist",
+    "github": "substack/minimist",
     "npm-name": "minimist"
   }
 ]
@@ -35,7 +35,7 @@
 нужное значение поля для дальнейшей обработки:
 
 ``` shell
-jq '.[] | ."github-name"' list.json --raw-output > list.txt
+jq '.[] | ."github"' list.json --raw-output > list.txt
 ```
 
 - [get-github-repositories-info.js](get-github-repositories-info.js)
@@ -63,7 +63,7 @@ jq '.[] | ."github-name"' list.json --raw-output > list.txt
   Генерирует по шаблону таблицу с информацией из GitHub.
 
   ``` shell
-  github-repositories-table-generator.js --template github-repositories-table-template.md --info github-repositories-info.json > github-repositories-table.md
+  github-repositories-table-generator.js --template github-repositories-table-template.md --info github-repositories-info.json --name github-repositories-list.json > github-repositories-table.md
   ```
 
 - [npm-packages-table-generator.js](npm-packages-table-generator.js)

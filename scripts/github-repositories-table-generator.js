@@ -30,10 +30,12 @@ function makeDate(date) {
 }
 
 for (let i = 0; i < repositories_info.length; i++) {
-    repositories_info[i]['lastCommit'] =
-	makeDate(
-	    new Date(
-		repositories_info[i]['commits'][0]['commit']['author']['date']))
+    if (!!repositories_info[i]['commits'][0]) {
+        repositories_info[i]['lastCommit'] =
+	    makeDate(
+	        new Date(
+		    repositories_info[i]['commits'][0]['commit']['author']['date']))
+    }
 
     repositories_info[i]['createdAt'] =
 	makeDate(new Date(repositories_info[i]['created_at']))
