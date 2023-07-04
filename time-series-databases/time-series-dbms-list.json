@@ -2,82 +2,92 @@
     {
 	"name": "Prometheus",
 	"homepage": "https://prometheus.io",
-	"github": "prometheus/prometheus"
+	"github": "prometheus/prometheus",
+        "query_language": "PromQL",
+        "docs_url": "https://prometheus.io/docs/introduction/overview/"
     },
     {
 	"name": "InfluxDB",
 	"homepage": "https://www.influxdata.com/time-series-platform/influxdb",
-	"github": "influxdata/influxdb"
+	"github": "influxdata/influxdb",
+        "docs_url": "https://docs.influxdata.com/influxdb/v1.8/"
     },
     {
 	"name": "TimescaleDB",
 	"homepage": "https://www.timescale.com",
-	"github": "timescale/timescaledb"
+	"github": "timescale/timescaledb",
+        "docs_url": "https://docs.timescale.com/latest/main"
     },
     {
 	"name": "Druid",
 	"homepage": "http://druid.io",
-	"github": "apache/druid"
+	"github": "apache/druid",
+        "docs_url": "http://druid.io/docs/latest/design/"
     },
     {
 	"name": "OpenTSDB",
 	"homepage": "http://opentsdb.net",
-	"github": "OpenTSDB/opentsdb"
+	"github": "OpenTSDB/opentsdb",
+        "docs_url": "http://opentsdb.net/docs/build/html/index.html"
     },
     {
 	"name": "VictoriaMetrics",
 	"homepage": "https://victoriametrics.com",
-	"github": "VictoriaMetrics/VictoriaMetrics"
+	"github": "VictoriaMetrics/VictoriaMetrics",
+        "docs_url": "https://victoriametrics.github.io"
     },
     {
 	"name": "KairosDB",
 	"homepage": "https://kairosdb.github.io",
-	"github": "kairosdb/kairosdb"
+	"github": "kairosdb/kairosdb",
+        "docs_url": "https://kairosdb.github.io/docs/build/html/index.html"
     },
     {
 	"name": "GridDB",
 	"homepage": "https://griddb.net",
-	"github": "griddb/griddb_nosql"
+	"github": "griddb/griddb",
+        "docs_url": "https://griddb.net/en/docs/documents/1-1_what-is-griddb.php"
     },
     {
 	"name": "Whisper (Graphite)",
 	"homepage": "https://graphiteapp.org",
-	"github": "graphite-project/whisper"
+	"github": "graphite-project/whisper",
+        "docs_url": "http://graphiteapp.org/quick-start-guides/"
     },
     {
 	"name": "Heroic",
 	"homepage": "https://spotify.github.io/heroic/",
-	"github": "spotify/heroic"
+	"github": "spotify/heroic",
+        "docs_url": "https://spotify.github.io/heroic/"
     },
     {
 	"name": "DalmatinerDB",
 	"homepage": "https://dalmatiner.io",
-	"github": "dalmatinerdb/dalmatinerdb"
+	"github": "dalmatinerdb/dalmatinerdb",
+        "docs_url": "https://dalmatiner.readme.io/docs"
     },
     {
 	"name": "Blueflood",
 	"homepage": "http://blueflood.io",
-	"github": "rackerlabs/blueflood"
+	"github": "rax-maas/blueflood"
     },
     {
 	"name": "Akumuli",
 	"homepage": "https://akumuli.org",
-	"github": "akumuli/Akumuli"
+	"github": "akumuli/Akumuli",
+        "docs_url": "https://docs.akumuli.org"
     },
     {
 	"name": "QuestDB",
 	"homepage": "https://www.questdb.io",
-	"github": "questdb/questdb"
+	"github": "questdb/questdb",
+        "docs_url": "https://www.questdb.io/docs/documentationOverview"
     },
     {
 	"name": "Warp 10 Platform",
 	"homepage": "https://www.warp10.io",
-	"github": "senx/warp10-platform"
-    },
-    {
-	"name": "Axibase TSDB",
-	"homepage": "https://axibase.com/products/axibase-time-series-database",
-	"github": "axibase/atsd"
+	"github": "senx/warp10-platform",
+        "docs_url": "https://warp10.io/doc/reference"
     },
     {
 	"name": "Hawkular",
@@ -86,17 +96,69 @@
     },
     {
 	"name": "SiriDB",
-	"homepage": "https://siridb.net",
-	"github": "SiriDB/siridb-server"
+	"homepage": "https://siridb.com",
+	"github": "SiriDB/siridb-server",
+        "docs_url": "https://docs.siridb.net"
     },
     {
 	"name": "SiteWhere",
 	"homepage": "https://sitewhere.io",
-	"github": "sitewhere/sitewhere"
+	"github": "sitewhere/sitewhere",
+        "docs_url": "https://sitewhere.io/docs/2.1.0/"
     },
     {
 	"name": "Newts",
 	"homepage": "http://opennms.github.io/newts/",
 	"github": "OpenNMS/newts"
+    },
+    {
+        "name": "RRDtool",
+        "homepage": "https://oss.oetiker.ch/rrdtool",
+        "github": "oetiker/rrdtool-1.x"
+    },
+    {
+        "name": "TDengine",
+        "homepage": "https://tdengine.com",
+        "github": "taosdata/TDengine"
+    },
+    {
+        "name": "M3",
+        "homepage": "https://m3db.io",
+        "github": "m3db/m3"
+    },
+    {
+        "name": "CrateDB",
+        "homepage": "https://crate.io",
+        "github": "crate/crate"
+    },
+    {
+        "name": "IoTDB",
+        "homepage": "https://iotdb.apache.org",
+        "github": "apache/iotdb"
+    },
+    {
+        "name": "CnosDB",
+        "homepage": "https://www.cnosdb.com",
+        "github": "cnosdb/cnosdb"
+    },
+    {
+        "name": "BangDB",
+        "homepage": "https://bangdb.com",
+        "github": "sachin-sinha/BangDB"
+    },
+    {
+        "name": "ArcadeDB",
+        "homepage": "https://arcadedb.com",
+        "github": "ArcadeData/arcadedb"
+    },
+    {
+        "name": "NSDb",
+        "homepage": "https://nsdb.io",
+        "github": "radicalbit/NSDb/"
+    },
+    {
+        "name": "GreptimeDB",
+        "homepage": "https://greptime.com",
+        "github": "GreptimeTeam/greptimedb"
     }
 ]

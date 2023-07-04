@@ -3,28 +3,37 @@
 _В этом кратком обзоре представлены только свободно-распространяемые СУБД с
 репозиторием на GitHub. СУБД перечислены в порядке убывания числа звёзд на GitHub._
 
-| # | Name | Repository | Stars | Language | License | Last Commit | Created |
-|-|-|-|-|-|-|-|-|
-| 1 | [Prometheus](https://prometheus.io/) | [prometheus/prometheus](https://github.com/prometheus/prometheus) | 30672 | Go | Apache License 2.0 | 2020-05-11 | 2012-11-24 |
-| 2 | [InfluxDB](https://influxdata.com) | [influxdata/influxdb](https://github.com/influxdata/influxdb) | 18823 | Go | MIT License | 2020-05-11 | 2013-09-26 |
-| 3 | [Druid](https://druid.apache.org/) | [apache/druid](https://github.com/apache/druid) | 9610 | Java | Apache License 2.0 | 2020-05-09 | 2012-10-23 |
-| 4 | [TimescaleDB](https://www.timescale.com/) | [timescale/timescaledb](https://github.com/timescale/timescaledb) | 8504 | C | Other | 2020-05-09 | 2017-03-07 |
-| 5 | [OpenTSDB](http://opentsdb.net) | [OpenTSDB/opentsdb](https://github.com/OpenTSDB/opentsdb) | 4117 | Java | GNU Lesser General Public License v2.1 | 2019-11-20 | 2010-08-27 |
-| 6 | [VictoriaMetrics](https://victoriametrics.com/) | [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) | 2254 | Go | Apache License 2.0 | 2020-05-11 | 2018-09-30 |
-| 7 | KairosDB | [kairosdb/kairosdb](https://github.com/kairosdb/kairosdb) | 1534 | Java | Apache License 2.0 | 2020-04-14 | 2013-02-06 |
-| 8 | [GridDB](https://griddb.net/) | [griddb/griddb_nosql](https://github.com/griddb/griddb_nosql) | 1184 | C++ |  | 2020-04-28 | 2016-02-24 |
-| 9 | [Whisper (Graphite)](http://graphite.readthedocs.org/) | [graphite-project/whisper](https://github.com/graphite-project/whisper) | 1075 | Python | Apache License 2.0 | 2020-05-08 | 2012-05-08 |
-| 10 | [Heroic](https://spotify.github.io/heroic/) | [spotify/heroic](https://github.com/spotify/heroic) | 774 | Java | Apache License 2.0 | 2020-05-08 | 2015-05-29 |
-| 11 | [DalmatinerDB](https://dalmatiner.io) | [dalmatinerdb/dalmatinerdb](https://github.com/dalmatinerdb/dalmatinerdb) | 696 | Erlang | MIT License | 2018-03-15 | 2014-06-13 |
-| 12 | [Akumuli](http://akumuli.org) | [akumuli/Akumuli](https://github.com/akumuli/Akumuli) | 693 | C++ | Apache License 2.0 | 2020-05-07 | 2014-01-29 |
-| 13 | [SiteWhere](https://sitewhere.io) | [sitewhere/sitewhere](https://github.com/sitewhere/sitewhere) | 652 | Java | Other | 2019-08-12 | 2014-01-06 |
-| 14 | [Blueflood](http://www.blueflood.io) | [rackerlabs/blueflood](https://github.com/rackerlabs/blueflood) | 591 | Java | Apache License 2.0 | 2018-06-04 | 2013-05-15 |
-| 15 | [QuestDB](https://www.questdb.io) | [questdb/questdb](https://github.com/questdb/questdb) | 444 | Java | Apache License 2.0 | 2020-05-11 | 2014-04-29 |
-| 16 | [SiriDB](https://siridb.net) | [SiriDB/siridb-server](https://github.com/SiriDB/siridb-server) | 417 | C | MIT License | 2020-04-23 | 2016-03-30 |
-| 17 | Hawkular | [hawkular/hawkular-metrics](https://github.com/hawkular/hawkular-metrics) | 221 | Java | Apache License 2.0 | 2019-07-03 | 2014-03-13 |
-| 18 | [Warp 10 Platform](https://warp10.io/) | [senx/warp10-platform](https://github.com/senx/warp10-platform) | 196 | Java | Apache License 2.0 | 2020-05-10 | 2016-01-28 |
-| 19 | Newts | [OpenNMS/newts](https://github.com/OpenNMS/newts) | 182 | Java | Apache License 2.0 | 2019-09-13 | 2014-01-24 |
-| 20 | [Axibase TSDB](https://axibase.com/docs/atsd) | [axibase/atsd](https://github.com/axibase/atsd) | 64 | HTML | Other | 2020-05-08 | 2016-03-29 |
+| # | Name | Repository | Stars | Query Language | Language | License | Last Commit | Created |
+|:-:|------|------------|------:|:--------------:|:--------:|---------|:-----------:|:-------:|
+| 1 | [Prometheus](https://prometheus.io/) | [prometheus/prometheus](https://github.com/prometheus/prometheus) | 48855 |  | Go | Apache License 2.0 | 2023-07-04 | 2012-11-24 |
+| 2 | [InfluxDB](https://influxdata.com) | [influxdata/influxdb](https://github.com/influxdata/influxdb) | 25728 |  | Go | MIT License | 2023-06-30 | 2013-09-26 |
+| 3 | [TDengine](https://tdengine.com) | [taosdata/TDengine](https://github.com/taosdata/TDengine) | 21530 |  | C | GNU Affero General Public License v3.0 | 2023-07-04 | 2019-07-11 |
+| 4 | [TimescaleDB](https://www.timescale.com/) | [timescale/timescaledb](https://github.com/timescale/timescaledb) | 15153 |  | C |  | 2023-06-07 | 2017-03-07 |
+| 5 | [Druid](https://druid.apache.org/) | [apache/druid](https://github.com/apache/druid) | 12697 |  | Java | Apache License 2.0 | 2023-07-04 | 2012-10-23 |
+| 6 | [QuestDB](https://questdb.io) | [questdb/questdb](https://github.com/questdb/questdb) | 12033 |  | Java | Apache License 2.0 | 2023-07-03 | 2014-04-29 |
+| 7 | [VictoriaMetrics](https://victoriametrics.com/) | [VictoriaMetrics/VictoriaMetrics](https://github.com/VictoriaMetrics/VictoriaMetrics) | 8809 |  | Go | Apache License 2.0 | 2023-07-04 | 2018-09-30 |
+| 8 | [OpenTSDB](http://opentsdb.net) | [OpenTSDB/opentsdb](https://github.com/OpenTSDB/opentsdb) | 4847 |  | Java | GNU Lesser General Public License v2.1 | 2023-04-11 | 2010-08-27 |
+| 9 | [M3](https://m3db.io/) | [m3db/m3](https://github.com/m3db/m3) | 4452 |  | Go | Apache License 2.0 | 2023-06-21 | 2016-06-14 |
+| 10 | [CrateDB](https://crate.io/products/cratedb/) | [crate/crate](https://github.com/crate/crate) | 3711 |  | Java | Apache License 2.0 | 2023-06-29 | 2013-04-10 |
+| 11 | [IoTDB](https://iotdb.apache.org/) | [apache/iotdb](https://github.com/apache/iotdb) | 3255 |  | Java | Apache License 2.0 | 2023-07-04 | 2018-11-25 |
+| 12 | [GreptimeDB](https://greptime.com/) | [GreptimeTeam/greptimedb](https://github.com/GreptimeTeam/greptimedb) | 2845 |  | Rust | Apache License 2.0 | 2023-07-04 | 2022-04-11 |
+| 13 | [GridDB](https://griddb.org/) | [griddb/griddb](https://github.com/griddb/griddb) | 2123 |  | C++ | GNU Affero General Public License v3.0 | 2023-06-12 | 2016-02-24 |
+| 14 | KairosDB | [kairosdb/kairosdb](https://github.com/kairosdb/kairosdb) | 1698 |  | Java | Apache License 2.0 | 2023-06-14 | 2013-02-06 |
+| 15 | [CnosDB](https://www.cnosdb.com) | [cnosdb/cnosdb](https://github.com/cnosdb/cnosdb) | 1325 |  | Rust | GNU Affero General Public License v3.0 | 2023-07-03 | 2021-10-25 |
+| 16 | [Whisper (Graphite)](http://graphite.readthedocs.org/) | [graphite-project/whisper](https://github.com/graphite-project/whisper) | 1201 |  | Python | Apache License 2.0 | 2023-02-19 | 2012-05-08 |
+| 17 | [SiteWhere](https://sitewhere.io) | [sitewhere/sitewhere](https://github.com/sitewhere/sitewhere) | 949 |  | Java |  | 2021-03-23 | 2014-01-06 |
+| 18 | [RRDtool](http://www.rrdtool.org) | [oetiker/rrdtool-1.x](https://github.com/oetiker/rrdtool-1.x) | 875 |  | C | GNU General Public License v2.0 | 2023-05-01 | 2012-09-11 |
+| 19 | [Heroic](https://spotify.github.io/heroic/) | [spotify/heroic](https://github.com/spotify/heroic) | 844 |  | Java | Apache License 2.0 | 2021-03-26 | 2015-05-29 |
+| 20 | [Akumuli](http://akumuli.org) | [akumuli/Akumuli](https://github.com/akumuli/Akumuli) | 818 |  | C++ | Apache License 2.0 | 2020-05-19 | 2014-01-29 |
+| 21 | [DalmatinerDB](https://dalmatiner.io) | [dalmatinerdb/dalmatinerdb](https://github.com/dalmatinerdb/dalmatinerdb) | 700 |  | Erlang | MIT License | 2018-03-15 | 2014-06-13 |
+| 22 | [Blueflood](http://www.blueflood.io) | [rax-maas/blueflood](https://github.com/rax-maas/blueflood) | 591 |  | Java | Apache License 2.0 | 2022-09-23 | 2013-05-15 |
+| 23 | [SiriDB](https://siridb.com) | [SiriDB/siridb-server](https://github.com/SiriDB/siridb-server) | 481 |  | C | MIT License | 2023-03-21 | 2016-03-30 |
+| 24 | [Warp 10 Platform](https://warp10.io/) | [senx/warp10-platform](https://github.com/senx/warp10-platform) | 347 |  | Java | Apache License 2.0 | 2023-06-30 | 2016-01-28 |
+| 25 | [ArcadeDB](https://arcadedb.com) | [ArcadeData/arcadedb](https://github.com/ArcadeData/arcadedb) | 332 |  | Java | Apache License 2.0 | 2023-07-04 | 2021-08-16 |
+| 26 | Hawkular | [hawkular/hawkular-metrics](https://github.com/hawkular/hawkular-metrics) | 229 |  | Java | Apache License 2.0 | 2019-07-03 | 2014-03-13 |
+| 27 | Newts | [OpenNMS/newts](https://github.com/OpenNMS/newts) | 188 |  | Java | Apache License 2.0 | 2023-04-18 | 2014-01-24 |
+| 28 | [NSDb](https://nsdb.io/) | [radicalbit/NSDb](https://github.com/radicalbit/NSDb) | 52 |  | Scala | Apache License 2.0 | 2021-12-03 | 2018-05-31 |
+| 29 | [BangDB](http://bangdb.com) | [sachin-sinha/BangDB](https://github.com/sachin-sinha/BangDB) | 48 |  | C++ |  | 2023-04-16 | 2015-04-16 |
 
 ## Prometheus
 
@@ -113,24 +122,30 @@ _В этом кратком обзоре представлены только �
 - версия: 2.0.36
 - документация: <https://docs.siridb.net/>
 
-## Hawkular
-
-- версия: 0.31.2
-
 ## Warp 10 Platform
 
 - версия: 2.5.0
 - документация: <https://warp10.io/doc/reference>
 
-## Newts
-
-- версия: 1.5.2
-
 ## Axibase TSDB
 
-- документация: <https://axibase.com/docs/atsd/>
+- Удалена из обзорв (см. ниже).
+- Документация: <https://axibase.com/docs/atsd/>
 
 ## Обновления
+
+- _3 июля 2023_:
+  - Обновлена таблиа. Обновлены ссылки.
+  - Удалена Axibase TSDB, так как репозиторий исходных текстов удалён,
+    и других ссылок на исходники не найдено.
+  - Добавлены: RRDtool, TDengine, M3, CrateDB, IoTDB, CnosDB, BangDB, ArcadeDB,
+    NSDb, GreptimeDB
+  - Изменения в рейтинге:
+    - Новичёк TDengine оказался сразу на третьем месте.
+    - TimescaleDB потеснила Druid.
+    - VictoriaMetrics потеснила OpenTSDB.
+    - QuestDB рванул с 15-го места на 6-е.
+    - Многие новички неплохо потеснили старичков.
 
 - _11 мая 2020_:
   - Информация о СУБД сведена в генерируемую таблицу.
@@ -142,4 +157,4 @@ _В этом кратком обзоре представлены только �
 - [Top 10 Time Series Databases](https://www.outlyer.com/blog/top10-open-source-time-series-databases/)
 - [DB-Engines Ranking of Time Series DBMS](https://db-engines.com/en/ranking/time+series+dbms)
 
-(c) 2018, 2020, Симоненко Евгений
+(c) 2018, 2020, 2023, Симоненко Евгений
